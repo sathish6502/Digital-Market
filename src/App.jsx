@@ -14,4 +14,15 @@ const App = () => {
   )
 }
 
-export default App
+      {/* Common Header (all pages) */}
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
+    </BrowserRouter>
+  );
+};
+
+export default App;
