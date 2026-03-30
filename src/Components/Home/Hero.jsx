@@ -3,7 +3,7 @@ import { Code, Palette, Bot, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen bg-[#020617] text-white flex items-center justify-center px-4 sm:px-6 md:px-12 py-8 relative overflow-hidden">
+    <div className="min-h-screen bg-[#020617] text-white flex items-center justify-center px-4 sm:px-6 md:px-12 py-32 relative overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/20 blur-[120px] rounded-full"></div>
