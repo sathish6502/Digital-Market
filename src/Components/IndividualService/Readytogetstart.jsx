@@ -3,8 +3,9 @@ import React from 'react'
 const Readytogetstart = () => {
   return (
      <div className="bg-[#020617] py-10 px-6 flex justify-center">
-      <div className="w-full max-w-5xl rounded-2xl bg-gradient-to-r from-[#1e293b] via-[#1f3b4d] to-[#134e4a] p-10 md:p-14 text-center shadow-xl">
-        
+      <div className="mt-5 mb-10 max-w-3xl mx-auto min-h-[260px] p-8 md:p-12 rounded-xl 
+bg-gradient-to-r from-[#0066FF]/20 to-[#00D98C]/20 backdrop-blur-md 
+flex flex-col items-center justify-center text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
           Ready to Get Started?
