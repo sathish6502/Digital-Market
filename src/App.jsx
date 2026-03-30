@@ -1,26 +1,17 @@
-import React from 'react'
-import BlogHero from "./Components/Blog/BlogHero";
-import BlogCard from "./Components/Blog/BlogCard";
-import BlogGrid from "./Components/Blog/BlogGrid";
-import BlogNews from "./Components/Blog/BlogNews"
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Components/Header/Header";
+import Home from "./Pages/Home";
+import Blog from "./Pages/Blog";
+
 const App = () => {
   return (
-    <div>
-      <BlogHero />
-      <BlogCard />
-      <BlogGrid />
-      <BlogNews />
-    </div>
-  )
-}
-
-      {/* Common Header (all pages) */}
+    <BrowserRouter>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
-
     </BrowserRouter>
   );
 };

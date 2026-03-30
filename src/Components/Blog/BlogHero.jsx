@@ -1,17 +1,18 @@
 export default function BlogHero() {
   return (
-    <section
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "420px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-        fontFamily: "Inter, sans-serif",
-      }}
-    >
+<section
+  style={{
+    position: "relative",
+    width: "100%",
+    height: "420px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    fontFamily: "Inter, sans-serif",
+    background: "#02081A", // 🔥 ADD THIS
+  }}
+>
       {/* BASE BACKGROUND */}
       <div
         style={{
@@ -21,25 +22,6 @@ export default function BlogHero() {
         }}
       />
 
-      {/* LEFT BLUE GLOW */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "radial-gradient(circle at 18% 40%, rgba(2,27,58,0.75), transparent 65%)", // 🔥 softened
-        }}
-      />
-
-      {/* RIGHT DARK FADE (MAIN FIX) */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "radial-gradient(circle at 92% 50%, rgba(0,0,0,0.7), transparent 65%)", // 🔥 FIXED
-        }}
-      />
 
       {/* CONTENT */}
       <div
