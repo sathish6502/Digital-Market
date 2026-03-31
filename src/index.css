@@ -1,23 +1,6 @@
 @import "tailwindcss";
-*{
+/* *{
 margin :0;
 padding : 0;
 box-sizing: border-box;
-}
-.bg-radial-glow {
-    background: radial-gradient(
-      circle at 50% 20%,
-      rgba(0, 255, 200, 0.15),
-      transparent 60%
-    );
-  }
-  .glow-light {
-    position: absolute;
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    background: rgba(0, 255, 200, 0.15);
-    filter: blur(120px);
-  }
+} */

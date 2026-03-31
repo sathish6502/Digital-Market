@@ -1,10 +1,21 @@
 import React from 'react'
-import Pages from './Pages/Ourservice';
+import Footer from './Components/Footer/Footer'
+import Service from './Pages/Service'
+import Ourservice from './Pages/Ourserviceervice'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Individualservice from './Pages/Individualservice'
 
 const App = () => {
   return (
-    <div>
-      <Pages />
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+   <BrowserRouter>
+   <Routes>
+    <Route path="/service" element={<Service />}/>
+    <Route path="/individualservice" element={<Individualservice />}/>
+    <Route path="/Ourservice" element={<Ourservice/>}/>
+    </Routes>  
+    </BrowserRouter>
+    <Footer />
     </div>
   )
 }
