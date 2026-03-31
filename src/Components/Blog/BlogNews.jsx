@@ -1,6 +1,20 @@
 import { TrendingUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function NewsletterSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <section
       style={{
@@ -18,7 +32,7 @@ export default function NewsletterSection() {
           width: "100%",
           maxWidth: "900px",
           borderRadius: "20px",
-          padding: "60px 40px",
+          padding: isMobile ? "40px 20px" : "60px 40px",
           textAlign: "center",
           background:
             "linear-gradient(135deg, rgba(30,58,138,0.55), rgba(16,185,129,0.45))",
@@ -29,25 +43,24 @@ export default function NewsletterSection() {
         {/* ICON */}
         <div
           style={{
-            width: "56px",
-            height: "56px",
+            width: isMobile ? "50px" : "56px",
+            height: isMobile ? "50px" : "56px",
             margin: "0 auto 24px",
             borderRadius: "16px",
-            background:
-              "linear-gradient(135deg, #2563eb, #10b981)",
+            background: "linear-gradient(135deg, #2563eb, #10b981)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0 0 30px rgba(37,99,235,0.6)", // 🔥 glow
+            boxShadow: "0 0 30px rgba(37,99,235,0.6)",
           }}
         >
-          <TrendingUp size={22} color="#ffffff" /> {/* 🔥 exact icon */}
+          <TrendingUp size={isMobile ? 20 : 22} color="#ffffff" />
         </div>
 
         {/* TITLE */}
         <h2
           style={{
-            fontSize: "40px",
+            fontSize: isMobile ? "28px" : "40px",
             fontWeight: 500,
             color: "#e5e7eb",
             marginBottom: "14px",
@@ -59,8 +72,8 @@ export default function NewsletterSection() {
         {/* SUBTEXT */}
         <p
           style={{
-            fontSize: "15px",
-            color: "#cbd5f5", // 🔥 lighter bluish grey (exact feel)
+            fontSize: isMobile ? "14px" : "15px",
+            color: "#cbd5f5",
             maxWidth: "620px",
             margin: "0 auto 32px",
             lineHeight: "1.7",
@@ -74,7 +87,9 @@ export default function NewsletterSection() {
         <div
           style={{
             display: "flex",
+            flexDirection: isMobile ? "column" : "row",
             justifyContent: "center",
+            alignItems: "center",
             gap: "14px",
           }}
         >
@@ -82,7 +97,7 @@ export default function NewsletterSection() {
             type="text"
             placeholder="Enter your email"
             style={{
-              width: "320px",
+              width: isMobile ? "100%" : "320px",
               padding: "14px 16px",
               borderRadius: "12px",
               border: "1px solid rgba(255,255,255,0.08)",
@@ -95,15 +110,15 @@ export default function NewsletterSection() {
 
           <button
             style={{
-              padding: "8px 26px",
+              width: isMobile ? "100%" : "auto",
+              padding: "10px 26px",
               borderRadius: "12px",
               border: "none",
-              background:
-                "linear-gradient(90deg,#2563eb,#3b82f6)", // 🔥 corrected gradient
+              background: "linear-gradient(90deg,#2563eb,#3b82f6)",
               color: "#ffffff",
               fontSize: "13px",
               cursor: "pointer",
-              boxShadow: "0 0 25px rgba(37,99,235,0.6)", // 🔥 glow
+              boxShadow: "0 0 25px rgba(37,99,235,0.6)",
             }}
           >
             Subscribe

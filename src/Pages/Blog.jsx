@@ -6,7 +6,7 @@ import BlogNews from "../Components/Blog/BlogNews";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="w-full min-h-screen bg-[#020617]">
       <BlogHero />
       <BlogCard />
       <BlogGrid />

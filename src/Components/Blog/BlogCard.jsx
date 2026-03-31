@@ -1,173 +1,70 @@
 import containerImg from "../../Assets/Blog/container.jpg";
 
-const styles = {
-  section: {
-    width: "100%",
-    padding: "40px 0",
-    background: "#02081A",
-    display: "flex",
-    justifyContent: "center",
-    fontFamily: "Inter, sans-serif",
-  },
-
-  wrapper: {
-    width: "100%",
-    maxWidth: "1100px",
-    padding: "0 20px",
-  },
-
-  card: {
-    display: "flex",
-    borderRadius: "18px",
-    overflow: "hidden",
-    background:
-      "linear-gradient(135deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015))",
-
-    // ✅ FIX (removed top border line)
-    border: "1px solid rgba(255,255,255,0.04)",
-    borderTop: "none",
-
-    boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
-  },
-
-  leftImage: {
-    width: "48%",
-    minHeight: "320px",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  },
-
-  right: {
-    width: "52%",
-    padding: "34px 38px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    background:
-      "linear-gradient(180deg, rgba(8,12,24,0.7), rgba(2,6,23,1))",
-  },
-
-  badge: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "6px",
-    padding: "5px 10px",
-    borderRadius: "999px",
-    background: "rgba(34,197,94,0.12)",
-    border: "1px solid rgba(34,197,94,0.25)",
-    width: "fit-content",
-    marginBottom: "14px",
-  },
-
-  title: {
-    fontSize: "32px",
-    fontWeight: 500,
-    lineHeight: "1.2",
-    color: "#ffffff",
-    marginBottom: "12px",
-  },
-
-  desc: {
-    fontSize: "14px",
-    color: "#9ca3af",
-    lineHeight: "1.6",
-    marginBottom: "18px",
-  },
-
-  meta: {
-    display: "flex",
-    alignItems: "center",
-    gap: "14px",
-    marginBottom: "18px",
-    flexWrap: "wrap",
-  },
-
-  button: {
-    width: "fit-content",
-    padding: "10px 16px",
-    borderRadius: "8px",
-    background: "linear-gradient(90deg,#2563eb,#1d4ed8)",
-    border: "none",
-    color: "#ffffff",
-    fontSize: "13px",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    gap: "6px",
-  },
-};
-
-export default function FeaturedBlog() {
+function BlogCard() {
   return (
-    <section style={styles.section}>
-      <div style={styles.wrapper}>
-        <div style={styles.card}>
-          
-          {/* LEFT IMAGE */}
-          <div
-            style={{
-              ...styles.leftImage,
-              backgroundImage: `url(${containerImg})`,
-            }}
-          />
+    <section className="relative w-full bg-[#020617] pb-16 flex justify-center px-4 overflow-hidden">
 
-          {/* RIGHT CONTENT */}
-          <div style={styles.right}>
-            
-            {/* BADGE */}
-            <div style={styles.badge}>
-              <span style={{ fontSize: "11px" }}>✨</span>
-              <span style={{ fontSize: "12px", color: "#4ade80" }}>
-                Featured Post
-              </span>
+      {/* Glow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-[-140px] right-[-120px] w-[520px] h-[520px] bg-blue-1000/30 blur-[150px]" />
+        <div className="absolute bottom-[-160px] left-[-120px] w-[520px] h-[520px] bg-indigo-1000/70 blur-[190px]" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-[1100px] min-h-[340px] rounded-2xl overflow-hidden 
+        border border-white/10 border-b-0
+        bg-[#0b1220] 
+        shadow-[0_30px_60px_rgba(0,0,0,0.9)]">
+
+        <div className="flex flex-col md:flex-row h-full">
+
+          <div className="w-full md:w-1/2 h-[220px] sm:h-[260px] md:h-auto">
+            <img src={containerImg} alt="AI" className="w-full h-full object-cover" />
+          </div>
+
+          <div className="w-full md:w-1/2 px-5 sm:px-6 md:px-8 py-5 sm:py-6 flex flex-col justify-between 
+            bg-gradient-to-br from-[#0b1220] via-[#0b1220]/95 to-[#0b1220]/80">
+
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full 
+                bg-green-500/10 text-green-400 text-[11px] sm:text-[12px] 
+                border border-green-500/20 w-fit mb-3 sm:mb-4">
+                ✨ Featured Post
+              </div>
+
+              <h2 className="text-white text-[20px] sm:text-[24px] md:text-[30px] leading-[1.2] font-semibold mb-3 sm:mb-4">
+                AI Integration in <br />
+                Modern Web <br />
+                Design: The Future <br />
+                is Now
+              </h2>
+
+              <p className="text-gray-400 text-[13px] sm:text-[14px] mb-4 sm:mb-5">
+                Exploring how AI-powered automation, chatbots, and creative <br />
+                services are transforming digital experiences and <br />
+                revolutionizing customer engagement.
+              </p>
             </div>
 
-            {/* TITLE */}
-            <h2 style={styles.title}>
-              AI Integration in <br />
-              Modern Web <br />
-              Design: The Future <br />
-              is Now
-            </h2>
+            <div>
+              <div className="flex flex-wrap items-center gap-3 text-gray-500 text-[11px] mb-3 sm:mb-4">
+                <span>📅 October 15, 2025</span>
+                <span>⏱ 8 min read</span>
+                <span className="px-2 py-0.5 rounded-full bg-white/10 text-gray-300 text-[10px]">
+                  AI & Automation
+                </span>
+              </div>
 
-            {/* DESCRIPTION */}
-            <p style={styles.desc}>
-              Exploring how AI-powered automation, chatbots, and creative
-              services are transforming digital experiences and <br />
-              revolutionizing customer engagement.
-            </p>
-
-            {/* META */}
-            <div style={styles.meta}>
-              <span style={{ fontSize: "12px", color: "#9ca3af" }}>
-                📅 October 15, 2025
-              </span>
-
-              <span style={{ fontSize: "12px", color: "#9ca3af" }}>
-                ⏱ 8 min read
-              </span>
-
-              <span
-                style={{
-                  fontSize: "11px",
-                  padding: "4px 10px",
-                  borderRadius: "999px",
-                  background: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  color: "#d1d5db",
-                }}
-              >
-                AI & Automation
-              </span>
+              <button className="px-4 py-2 text-[12px] sm:text-[13px] rounded-md bg-blue-600 hover:bg-blue-500 text-white">
+                Read Article →
+              </button>
             </div>
 
-            {/* BUTTON */}
-            <button style={styles.button}>
-              Read Article →
-            </button>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+export default BlogCard;
