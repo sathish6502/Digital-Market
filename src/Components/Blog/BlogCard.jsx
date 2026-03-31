@@ -1,95 +1,129 @@
 import containerImg from "../../Assets/Blog/container.jpg";
 
+const styles = {
+  section: {
+    width: "100%",
+    padding: "40px 0",
+    background: "#02081A",
+    display: "flex",
+    justifyContent: "center",
+    fontFamily: "Inter, sans-serif",
+  },
+
+  wrapper: {
+    width: "100%",
+    maxWidth: "1100px",
+    padding: "0 20px",
+  },
+
+  card: {
+    display: "flex",
+    borderRadius: "18px",
+    overflow: "hidden",
+    background:
+      "linear-gradient(135deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015))",
+
+    // ✅ FIX (removed top border line)
+    border: "1px solid rgba(255,255,255,0.04)",
+    borderTop: "none",
+
+    boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
+  },
+
+  leftImage: {
+    width: "48%",
+    minHeight: "320px",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  },
+
+  right: {
+    width: "52%",
+    padding: "34px 38px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    background:
+      "linear-gradient(180deg, rgba(8,12,24,0.7), rgba(2,6,23,1))",
+  },
+
+  badge: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "6px",
+    padding: "5px 10px",
+    borderRadius: "999px",
+    background: "rgba(34,197,94,0.12)",
+    border: "1px solid rgba(34,197,94,0.25)",
+    width: "fit-content",
+    marginBottom: "14px",
+  },
+
+  title: {
+    fontSize: "32px",
+    fontWeight: 500,
+    lineHeight: "1.2",
+    color: "#ffffff",
+    marginBottom: "12px",
+  },
+
+  desc: {
+    fontSize: "14px",
+    color: "#9ca3af",
+    lineHeight: "1.6",
+    marginBottom: "18px",
+  },
+
+  meta: {
+    display: "flex",
+    alignItems: "center",
+    gap: "14px",
+    marginBottom: "18px",
+    flexWrap: "wrap",
+  },
+
+  button: {
+    width: "fit-content",
+    padding: "10px 16px",
+    borderRadius: "8px",
+    background: "linear-gradient(90deg,#2563eb,#1d4ed8)",
+    border: "none",
+    color: "#ffffff",
+    fontSize: "13px",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    gap: "6px",
+  },
+};
+
 export default function FeaturedBlog() {
   return (
-    <section
-      style={{
-        width: "100%",
-        padding: "40px 0",
-        background: "#02081A", // ✅ same as hero
-        display: "flex",
-        justifyContent: "center",
-        fontFamily: "Inter, sans-serif",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "1100px",
-          padding: "0 20px",
-        }}
-      >
-        {/* CARD */}
-        <div
-          style={{
-            display: "flex",
-            borderRadius: "18px",
-            overflow: "hidden",
-            background:
-              "linear-gradient(135deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015))", // 🔥 softened
-            border: "1px solid rgba(255,255,255,0.04)", // 🔥 FIX (main line issue)
-            boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
-          }}
-        >
+    <section style={styles.section}>
+      <div style={styles.wrapper}>
+        <div style={styles.card}>
+          
           {/* LEFT IMAGE */}
           <div
             style={{
-              width: "48%",
-              minHeight: "320px",
+              ...styles.leftImage,
               backgroundImage: `url(${containerImg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
             }}
           />
 
           {/* RIGHT CONTENT */}
-          <div
-            style={{
-              width: "52%",
-              padding: "34px 38px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              background:
-                "linear-gradient(180deg, rgba(8,12,24,0.7), rgba(2,6,23,1))", // 🔥 matched to hero tone
-            }}
-          >
+          <div style={styles.right}>
+            
             {/* BADGE */}
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "6px",
-                padding: "5px 10px",
-                borderRadius: "999px",
-                background: "rgba(34,197,94,0.12)",
-                border: "1px solid rgba(34,197,94,0.25)",
-                width: "fit-content",
-                marginBottom: "14px",
-              }}
-            >
+            <div style={styles.badge}>
               <span style={{ fontSize: "11px" }}>✨</span>
-              <span
-                style={{
-                  fontSize: "12px",
-                  color: "#4ade80",
-                  fontWeight: 500,
-                }}
-              >
+              <span style={{ fontSize: "12px", color: "#4ade80" }}>
                 Featured Post
               </span>
             </div>
 
             {/* TITLE */}
-            <h2
-              style={{
-                fontSize: "32px",
-                fontWeight: 500,
-                lineHeight: "1.2",
-                color: "#ffffff",
-                marginBottom: "12px",
-              }}
-            >
+            <h2 style={styles.title}>
               AI Integration in <br />
               Modern Web <br />
               Design: The Future <br />
@@ -97,29 +131,14 @@ export default function FeaturedBlog() {
             </h2>
 
             {/* DESCRIPTION */}
-            <p
-              style={{
-                fontSize: "14px",
-                color: "#9ca3af",
-                lineHeight: "1.6",
-                marginBottom: "18px",
-              }}
-            >
+            <p style={styles.desc}>
               Exploring how AI-powered automation, chatbots, and creative
               services are transforming digital experiences and <br />
               revolutionizing customer engagement.
             </p>
 
             {/* META */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "14px",
-                marginBottom: "18px",
-                flexWrap: "wrap",
-              }}
-            >
+            <div style={styles.meta}>
               <span style={{ fontSize: "12px", color: "#9ca3af" }}>
                 📅 October 15, 2025
               </span>
@@ -143,21 +162,7 @@ export default function FeaturedBlog() {
             </div>
 
             {/* BUTTON */}
-            <button
-              style={{
-                width: "fit-content",
-                padding: "10px 16px",
-                borderRadius: "8px",
-                background: "linear-gradient(90deg,#2563eb,#1d4ed8)",
-                border: "none",
-                color: "#ffffff",
-                fontSize: "13px",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
-              }}
-            >
+            <button style={styles.button}>
               Read Article →
             </button>
           </div>
