@@ -39,7 +39,7 @@ const Featurework = () => {
               <img
                 src={container5}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg'
+                className='w-full object-cover rounded-lg'
               />
             </div>
 
@@ -47,7 +47,7 @@ const Featurework = () => {
               <img
                 src={container6}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg
+                className='w-full  object-cover rounded-[16px]
                 border-t-[0.8px] border-[#FFFFFF1A] 
                 shadow-[4px_6px_25px_0px_#00000024]'
               />
