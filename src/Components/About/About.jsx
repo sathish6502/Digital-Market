@@ -3,7 +3,7 @@ export default function AboutHero() {
     <section className="w-full py-16 sm:py-20 bg-[#020617] flex items-center justify-center">
 
       {/* 🧊 CARD ONLY WITH BORDER + GRADIENT COLOR */}
-      <div className="w-full h-65 mx-auto border border-white/5 
+      <div className="w-full h-65 mx-auto border border-white/10 
      bg-gradient-to-b from-[#020617] to-[#020617] 
        shadow-2xl px-6 sm:px-10 py-10 text-center">
         
