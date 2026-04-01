@@ -53,8 +53,9 @@ const Featurework = () => {
                     bg-white/5 border-t border-white/10 
                     shadow-[4px_6px_25px_0px_#00000024] 
                     p-8 flex flex-wrap md:nowrap md:block md:w-[260px]'>
-                      <h1 className=" font-normal text-5xl leading-[48px] text-center text-[#FFFFFF] 
-                        bg-gradient-to-br from-[#0066FF] to-[#00D98C] bg-clip-text text-transparent">{item.value}</h1>
+                      <h1 className=" font-normal text-5xl leading-[48px] text-center
+                       text-[#FFFFFF] 
+                      ">{item.value}</h1>
                         <p className='font-normal leading-[24px] text-center text-[#FFFFFFB2]'>
                           {item.label}
                         </p>
