@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 const GetStarted = () => {
   return (
     <div className='max-w-[980px] mx-auto px-6 py-12'>
-        <div className='w-full bg-gradient-to-br from-[#0066FF]/20 to-[#00D98C]/20 border-[0.8px] bg-white/10 border-t-[0.8px] border-white/20 shadow-[4px_6px_25px_0px_#00000024] rounded-[24px] p-12'>
+        <div className='w-full bg-gradient-to-br from-[#020617]/20 to-[#020617]/20 border-[0.8px] bg-white/10 border-t-[0.8px] border-white/20 shadow-[4px_6px_25px_0px_#00000024] rounded-[24px] p-12'>
                       <div className='flex flex-col items-center max-w-[640px] mx-auto text-center justify-center gap-6'>
                 <h1 className='font-normal text-[48px] leading-[48px] 
                 text-[#FFFFFF]'>Ready to Start Your Project?</h1>
