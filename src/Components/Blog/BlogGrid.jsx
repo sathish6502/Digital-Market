@@ -64,12 +64,11 @@ export default function BlogGrid() {
 
       <div className="w-full max-w-[1100px] px-4">
 
-        {/* ✅ STACK ON MOBILE */}
         <div className="flex flex-col md:flex-row gap-6">
 
-          {/* SIDEBAR */}
+          {/* ✅ SIDEBAR (NO SHADE) */}
           <div className="w-full md:w-[240px] shrink-0 h-fit 
-            bg-[#0b1220] border border-[#1e293b] rounded-xl 
+            bg-transparent border border-[#1e293b] rounded-xl 
             p-4 sm:p-5 text-sm text-gray-300">
 
             <p className="mb-4 text-white font-medium">Categories</p>
@@ -98,15 +97,13 @@ export default function BlogGrid() {
             </ul>
           </div>
 
-          {/* GRID */}
-          <div className="flex-1 grid 
-            grid-cols-1 sm:grid-cols-2 
-            gap-5 sm:gap-6">
+          {/* ✅ BLOG GRID (NO SHADOW) */}
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
 
             {blogs.map((blog, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden border border-[#1e293b] bg-[#020617] hover:shadow-[0_0_25px_rgba(59,130,246,0.1)] transition"
+                className="rounded-xl overflow-hidden border border-[#1e293b] bg-transparent transition"
               >
                 <div className="h-[150px] sm:h-[160px] w-full">
                   <img
@@ -118,7 +115,9 @@ export default function BlogGrid() {
 
                 <div className="p-4 sm:p-5">
 
-                  <span className="text-[10px] sm:text-[11px] px-2 py-1 rounded-full bg-[#0b1220] border border-[#1e293b] text-blue-400">
+                  {/* TAG */}
+                  <span className="text-[10px] sm:text-[11px] px-2 py-1 rounded-full 
+                    bg-transparent border border-[#1e293b] text-blue-400">
                     {blog.tag}
                   </span>
 
@@ -149,19 +148,19 @@ export default function BlogGrid() {
 
         {/* PAGINATION */}
         <div className="flex flex-wrap justify-center mt-10 gap-2">
-          <button className="px-3 py-1 text-xs bg-[#0b1220] border border-[#1e293b] rounded-md text-gray-300">
+          <button className="px-3 py-1 text-xs border border-[#1e293b] rounded-md text-gray-300">
             Previous
           </button>
           <button className="px-3 py-1 text-xs bg-blue-600 rounded-md text-white">
             1
           </button>
-          <button className="px-3 py-1 text-xs bg-[#0b1220] border border-[#1e293b] rounded-md text-gray-300">
+          <button className="px-3 py-1 text-xs border border-[#1e293b] rounded-md text-gray-300">
             2
           </button>
-          <button className="px-3 py-1 text-xs bg-[#0b1220] border border-[#1e293b] rounded-md text-gray-300">
+          <button className="px-3 py-1 text-xs border border-[#1e293b] rounded-md text-gray-300">
             3
           </button>
-          <button className="px-3 py-1 text-xs bg-[#0b1220] border border-[#1e293b] rounded-md text-gray-300">
+          <button className="px-3 py-1 text-xs border border-[#1e293b] rounded-md text-gray-300">
             Next
           </button>
         </div>

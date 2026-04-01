@@ -18,7 +18,6 @@ const Featurework = () => {
 
     <section className="w-full bg-[#020617]">
 
-      {/* ✅ FIX 1: Equal left/right spacing */}
       <div className='max-w-[1100px] mx-auto py-12 px-6'>
 
         {/* IMAGE STACK */}
@@ -32,24 +31,24 @@ const Featurework = () => {
 
           <img src={container4} alt='' className='w-full rounded-lg bg-white/5 border-t-[0.8px] border-[#FFFFFF1A] shadow-[4px_6px_25px_0px_#00000024]' />
 
-          {/* LAST TWO IMAGES */}
+          {/* ✅ FIXED LAST TWO IMAGES */}
           <div className='flex flex-col md:flex-row gap-6 w-full'>
 
+            {/* LEFT */}
             <div className='flex-1'>
               <img
                 src={container5}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg'
+                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg block'
               />
             </div>
 
+            {/* RIGHT */}
             <div className='flex-1'>
               <img
                 src={container6}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg
-                border-t-[0.8px] border-[#FFFFFF1A] 
-                shadow-[4px_6px_25px_0px_#00000024]'
+                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg block'
               />
             </div>
 
@@ -60,8 +59,6 @@ const Featurework = () => {
         <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-8'>
 
           {statsData.map((item) => (
-
-            // ✅ FIX 2: Proper spacing (no merge)
             <div
               key={item.id}
               className='max-w-[260px] w-full mx-auto rounded-2xl 
@@ -77,7 +74,6 @@ const Featurework = () => {
                 {item.label}
               </p>
             </div>
-
           ))}
 
         </div>
