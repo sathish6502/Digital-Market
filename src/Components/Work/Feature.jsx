@@ -15,7 +15,7 @@ const Feature = () => {
       </div>
 
       {/* Main content */}
-      <div className="container mx-auto px-12 pt-20 md:pt-32 lg:pt-40 relative z-10">
+      <div className="container mx-auto px-13 pt-20 md:pt-32 lg:pt-40 relative z-10">
         <div className="flex flex-col items-start gap-6 md:gap-8">
           {/* Featured Work with Icon */}
           <div className="inline-flex items-center gap-2 text-[#FFFFFFE5] px-3 py-1 rounded-3xl text-sm font-medium bg-white/5 backdrop-blur-xl border-[0.8px] border-white/10 shadow-[4px_6px_25px_0px_rgba(0,0,0,0.14)]">
