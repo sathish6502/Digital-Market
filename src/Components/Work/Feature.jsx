@@ -4,6 +4,7 @@ import portfolio from '../../assets/WorkPortfolio.png'
 
 const Feature = () => {
   return (
+    <div className='min-h-screen bg-[linear-gradient(135deg,#0A0E27_0%,#000000_50%,#0D1B3A_100%)]'>
     <div className="relative min-h-screen bg-[linear-gradient(135deg,#0A0E27_0%,#000000_50%,#0D1B3A_100%)] overflow-hidden">
       {/* Decorative blurred circle */}
       <div className="absolute w-[456.7923889160156px] h-[456.7923889160156px] 
@@ -57,6 +58,7 @@ const Feature = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
