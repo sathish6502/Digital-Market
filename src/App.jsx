@@ -2,9 +2,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Home from "./Pages/Home";
-import Blog from "./Pages/Blog";
+
 import Service from "./Pages/Service";
 import Individualservice from "./Pages/Individualservice";
+import Work from "./Pages/Work";
+import Blog from "./Pages/Blog";
 import Footer from "./Components/Footer/Footer";
 
 const App = () => {
@@ -13,9 +15,11 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/work" element={<Work />} />
+        
         <Route path="/services" element={<Service />} />
         <Route path="/services/:serviceId" element={<Individualservice />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer />
     </BrowserRouter>
