@@ -14,7 +14,7 @@ const blogs = [
     title: "Building 24/7 Customer Support with AI Chatbots",
     desc: "How GPT-powered chatbots are transforming customer service across WhatsApp, Facebook, and web platforms.",
     date: "October 15, 2025",
-    read: "8 min read",
+    read: "6 min read",
   },
   {
     img: img2,
@@ -26,11 +26,11 @@ const blogs = [
   },
   {
     img: img3,
-    tag: "AI & Automation",
+    tag: "AI Creative",
     title: "AI-Enhanced Product Photography for E-commerce",
     desc: "Creating consistent, styled product visuals at scale using AI-powered creative tools.",
     date: "September 25, 2025",
-    read: "6 min read",
+    read: "5 min read",
   },
   {
     img: img4,
@@ -38,7 +38,7 @@ const blogs = [
     title: "Web Performance Optimization: Core Web Vitals",
     desc: "Practical techniques for lightning-fast load times and improved search rankings.",
     date: "September 20, 2025",
-    read: "9 min read",
+    read: "6 min read",
   },
   {
     img: img5,
@@ -46,7 +46,7 @@ const blogs = [
     title: "Mobile App Design Systems in Figma",
     desc: "Building scalable iOS and Android design systems with interactive prototypes.",
     date: "September 15, 2025",
-    read: "8 min read",
+    read: "6 min read",
   },
   {
     img: img6,
@@ -58,22 +58,44 @@ const blogs = [
   },
 ];
 
+const getTagStyle = (tag) => {
+  if (tag === "AI & Automation") {
+    return "bg-purple-500/10 text-purple-400 border border-purple-500/20";
+  }
+  if (tag === "UX Design") {
+    return "bg-blue-500/10 text-blue-400 border border-blue-500/20";
+  }
+  if (tag === "AI Creative") {
+    return "bg-red-500/10 text-red-400 border border-red-500/20";
+  }
+  if (tag === "Web Development") {
+    return "bg-green-500/10 text-green-400 border border-green-500/20";
+  }
+  if (tag === "Mobile Design") {
+    return "bg-blue-500/10 text-blue-400 border border-blue-500/20";
+  }
+  return "bg-gray-500/10 text-gray-400 border border-gray-500/20";
+};
+
 export default function BlogGrid() {
   return (
-    <section className="w-full bg-[#020617] py-12 flex justify-center">
+    <section className="w-full bg-[#020617] py-12">
 
-      <div className="w-full max-w-[1100px] px-4">
+      {/* ✅ ONLY FIXED CONTAINER */}
+      <div className=" px-8 sm:px-10 md:px-15">
 
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row gap-6 w-full">
 
-          {/* ✅ SIDEBAR (NO SHADE) */}
-          <div className="w-full md:w-[240px] shrink-0 h-fit 
-            bg-transparent border border-[#1e293b] rounded-xl 
-            p-4 sm:p-5 text-sm text-gray-300">
+          {/* CATEGORY */}
+          <div className="w-full md:w-[230px] shrink-0 
+            h-[290px]
+            bg-gradient-to-br from-[#0b1220] via-[#0b1220]/90 to-[#020617]
+            border border-[#1e293b] rounded-xl 
+            p-5 text-sm text-gray-300">
 
-            <p className="mb-4 text-white font-medium">Categories</p>
+            <p className="mb-6 text-white font-medium">Categories</p>
 
-            <ul className="space-y-3 sm:space-y-4">
+            <ul className="space-y-5">
               <li className="flex justify-between hover:text-white cursor-pointer">
                 <span>All Posts</span>
                 <span>(28)</span>
@@ -95,47 +117,49 @@ export default function BlogGrid() {
                 <span>(2)</span>
               </li>
             </ul>
+
           </div>
 
-          {/* ✅ BLOG GRID (NO SHADOW) */}
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+          {/* BLOG GRID */}
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
 
             {blogs.map((blog, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden border border-[#1e293b] bg-transparent transition"
+                className="rounded-xl overflow-hidden border border-[#1e293b] bg-transparent"
               >
-                <div className="h-[150px] sm:h-[160px] w-full">
+                <div className="h-[200px] sm:h-[220px] w-full overflow-hidden">
                   <img
                     src={blog.img}
                     alt=""
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
 
-                <div className="p-4 sm:p-5">
+                <div className="p-5">
 
-                  {/* TAG */}
-                  <span className="text-[10px] sm:text-[11px] px-2 py-1 rounded-full 
-                    bg-transparent border border-[#1e293b] text-blue-400">
+                  <span
+                    className={`text-[11px] px-2 py-1 rounded-full 
+                    ${getTagStyle(blog.tag)}`}
+                  >
                     {blog.tag}
                   </span>
 
-                  <h3 className="text-white text-[14px] sm:text-[16px] font-medium mt-3 leading-snug">
+                  <h3 className="text-white text-[16px] font-medium mt-3 leading-snug">
                     {blog.title}
                   </h3>
 
-                  <p className="text-gray-400 text-[12px] sm:text-[13px] mt-2 leading-relaxed">
+                  <p className="text-gray-400 text-[13px] mt-2 leading-relaxed">
                     {blog.desc}
                   </p>
 
-                  <div className="text-gray-500 text-[10px] sm:text-[11px] mt-3 flex flex-wrap gap-2 sm:gap-3">
+                  <div className="text-gray-500 text-[11px] mt-3 flex gap-3">
                     <span>{blog.date}</span>
                     <span>•</span>
                     <span>{blog.read}</span>
                   </div>
 
-                  <p className="text-blue-500 text-[12px] sm:text-[13px] mt-3 cursor-pointer hover:underline">
+                  <p className="text-blue-500 text-[13px] mt-3 cursor-pointer hover:underline">
                     Read More →
                   </p>
 
@@ -147,7 +171,7 @@ export default function BlogGrid() {
         </div>
 
         {/* PAGINATION */}
-        <div className="flex flex-wrap justify-center mt-10 gap-2">
+        <div className="flex justify-center mt-10 gap-2">
           <button className="px-3 py-1 text-xs border border-[#1e293b] rounded-md text-gray-300">
             Previous
           </button>

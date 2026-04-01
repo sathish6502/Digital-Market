@@ -7,8 +7,9 @@ import Service from "./Pages/Service";
 import Individualservice from "./Pages/Individualservice";
 import Work from "./Pages/Work";
 import About from "./Pages/About";
-import Ourservice from "./Pages/Ourservice";
+import Ourprocess from "./Pages/Ourservice";
 import Blog from "./Pages/Blog";
+import Blank from "./Components/Footer/Blank";
 
 const App = () => {
   return (
@@ -19,13 +20,15 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Service />} />
         <Route path="/services/:serviceId" element={<Individualservice />} />
-        <Route path="/ourservice" element={<Ourservice />} />
+        <Route path="/ourprocess" element={<Ourprocess />} />
         <Route path="/work" element={<Work />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>
 
       <Footer />
+      <Blank />
+
     </BrowserRouter>
   );
 };

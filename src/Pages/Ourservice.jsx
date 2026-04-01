@@ -1,12 +1,14 @@
 import React from 'react'
-import Ready from '../Components/Ourservice/Ready'
 import Work from '../Components/Ourservice/Work'
+import Ready from '../Components/Ourservice/Ready'
+
 
 const Ourservice = () => {
   return (
     <div>
-      <Ready />
       <Work />
+      <Ready />
+      
     </div>
   )
 }
