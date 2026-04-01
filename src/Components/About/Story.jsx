@@ -4,7 +4,7 @@ export default function OurStory() {
   return (
     <section className="w-full bg-[#020617] text-white  px-4 sm:px-8 md:px-12 py-10 sm:py-12">
       
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-50 items-center -mt-20">
         
         {/* LEFT CONTENT */}
         <div className="space-y-6 sm:space-y-6 max-w-xl ">
@@ -42,7 +42,7 @@ export default function OurStory() {
             <img
               src={OurTeamImage}
               alt="Team discussion"
-              className="w-[950px] h-[800px] object-cover"
+              className="w-[950px] h-[900px] object-cover"
             />
 
           </div>
