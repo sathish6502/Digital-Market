@@ -1,13 +1,12 @@
 export default function AboutHero() {
   return (
-    <section className="w-full py-16 sm:py-20 bg-[#020617] flex items-center justify-center">
+    <section className="w-full py-16 sm:py-10 bg-[#020617] flex items-center justify-center">
 
       {/* 🧊 CARD ONLY WITH BORDER + GRADIENT COLOR */}
-      <div className="w-full h-65 mx-auto border border-white/10 
-     bg-gradient-to-b from-[#020617] to-[#020617] 
-       shadow-2xl px-6 sm:px-10 py-10 text-center">
+      <div className="w-full h-65 mx-auto  
+      bg-gradient-to-r from-[#0066FF0D] via-[#00D98C0D] to-[#000000] shadow-xl  py-10 text-center -mb-25">
         
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-200 leading-tight py-2">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-lg text-gray-200 leading-tight py-2">
           About Graphikrafts
         </h1>
 

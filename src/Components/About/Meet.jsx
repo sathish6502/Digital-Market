@@ -30,7 +30,7 @@ export default function TeamSection() {
   return (
     <section className="bg-gradient-to-b from-[#020617] to-[#020617] py-8 sm:py-16 px-4">
       
-      <div className="text-center mb-10 sm:mb-14">
+      <div className="text-center mb-10 sm:mb-14 -mt-10">
         <h2 className="text-white text-3xl sm:text-4xl font-lg">
           Meet the Team
         </h2>
