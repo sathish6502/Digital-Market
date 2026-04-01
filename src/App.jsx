@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Service from "./Pages/Service";
 import Individualservice from "./Pages/Individualservice";
 import Work from "./Pages/Work";
+import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import Footer from "./Components/Footer/Footer";
 
@@ -15,9 +16,11 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />    
+        
         <Route path="/services" element={<Service />} />
         <Route path="/services/:serviceId" element={<Individualservice />} />
+        <Route path="/work" element={<Work />} />    
+        <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer />
