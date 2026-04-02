@@ -1,4 +1,4 @@
-import containerImg from "../../Assets/Blog/container.jpg";
+import containerImg from "../../assets/Blog/container.jpg";
 
 function BlogCard() {
   return (
