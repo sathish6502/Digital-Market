@@ -11,18 +11,17 @@ export default function CTASection() {
           Ready to start your next project? We'd love to hear from you.
         </p>
 
-  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-[320px] sm:max-w-full mx-auto sm:mx-0">
+        <div className="flex flex-col sm:flex-row md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8 w-full max-w-[320px] sm:max-w-full mx-auto">
+          
+          <button className="bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-lg text-sm sm:text-base font-semibold w-full sm:w-auto md:px-7">
+            Get in Touch
+          </button>
 
+          <button className="border border-gray-600 hover:border-gray-400 hover:bg-white/10 transition px-5 py-3 rounded-lg text-sm sm:text-base font-semibold w-full sm:w-auto md:px-7">
+            View Our Work
+          </button>
 
-  <button className="bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-lg text-sm sm:text-base font-semibold w-full sm:w-auto">
-    Get in Touch
-  </button>
-
-  <button className="border border-gray-600 hover:border-gray-400 hover:bg-white/10 transition px-5 py-3 rounded-lg text-sm sm:text-base font-semibold w-full sm:w-auto">
-    View Our Work
-  </button>
-
-</div>
+        </div>
 
       </div>
     </section>

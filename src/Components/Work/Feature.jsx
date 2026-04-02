@@ -4,6 +4,7 @@ import portfolio from '../../assets/WorkPortfolio.png'
 
 const Feature = () => {
   return (
+    <div className='min-h-screen bg-[linear-gradient(135deg,#0A0E27_0%,#000000_50%,#0D1B3A_100%)]'>
     <div className="relative min-h-screen bg-[linear-gradient(135deg,#0A0E27_0%,#000000_50%,#0D1B3A_100%)] overflow-hidden">
       {/* Decorative blurred circle */}
       <div className="absolute w-[456.7923889160156px] h-[456.7923889160156px] 
@@ -40,7 +41,7 @@ const Feature = () => {
             {["All Work","UI/UX","Web","Mobile","Branding"].map((label) => (
               <button 
                 key={label}
-                className="bg-[#FFFFFF0D] border-t-[0.8px] border-t-[#FFFFFF1A] 
+                className="bg-white/10 border-t-[0.8px] border-t-[#FFFFFF1A] 
                            shadow-[4px_6px_25px_0px_#00000024] 
                            hover:bg-[#0066FF] 
                            hover:shadow-[0px_0px_40px_0px_#0066FF1A] 
@@ -57,6 +58,7 @@ const Feature = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

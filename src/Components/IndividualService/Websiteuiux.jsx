@@ -4,18 +4,20 @@ import IndividualImg from "../../assets/Service/Images/individualimg.png";
 
 const Websiteuiux = () => {
   return (
-    <section className="w-full min-h-screen bg-gradient-to-r from-[#020617] via-[#020617] to-[#000000] flex items-center px-4">
+    <section className="w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-screen bg-gradient-to-r from-[#020617] via-[#020617] to-[#000000] flex items-center px-4">
       
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
         
         {/* LEFT CONTENT */}
         <div className="text-left">
           
           {/* Icon */}
-          <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#0066FF]/30 to-[#00D98C]/30 mb-6">
-            <Layers className="text-white w-5 h-5" />
-          </div>
-
+         <div className="w-12 h-12 flex items-center justify-center rounded-lg 
+                bg-gradient-to-br from-[#0066FF]/30 to-[#00D98C]/30 
+                mt-2 mb-6">
+  <Layers className="text-white w-5 h-5" />
+</div>
+    
           {/* Heading */}
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
             Website & UI/UX <br /> Design

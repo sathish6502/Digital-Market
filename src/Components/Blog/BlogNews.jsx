@@ -22,17 +22,16 @@ export default function NewsletterSection() {
         background: "#02081A",
         display: "flex",
         justifyContent: "center",
-        padding: "80px 20px",
+        padding: "50px 20px", // 🔥 reduced (80 → 50)
         fontFamily: "Inter, sans-serif",
       }}
     >
-      {/* CARD */}
       <div
         style={{
           width: "100%",
           maxWidth: "900px",
           borderRadius: "20px",
-          padding: isMobile ? "40px 20px" : "60px 40px",
+          padding: isMobile ? "30px 18px" : "40px 30px", // 🔥 reduced
           textAlign: "center",
           background:
             "linear-gradient(135deg, rgba(30,58,138,0.55), rgba(16,185,129,0.45))",
@@ -43,9 +42,9 @@ export default function NewsletterSection() {
         {/* ICON */}
         <div
           style={{
-            width: isMobile ? "50px" : "56px",
-            height: isMobile ? "50px" : "56px",
-            margin: "0 auto 24px",
+            width: isMobile ? "46px" : "52px",
+            height: isMobile ? "46px" : "52px",
+            margin: "0 auto 16px", // 🔥 reduced
             borderRadius: "16px",
             background: "linear-gradient(135deg, #2563eb, #10b981)",
             display: "flex",
@@ -54,16 +53,16 @@ export default function NewsletterSection() {
             boxShadow: "0 0 30px rgba(37,99,235,0.6)",
           }}
         >
-          <TrendingUp size={isMobile ? 20 : 22} color="#ffffff" />
+          <TrendingUp size={isMobile ? 18 : 20} color="#ffffff" />
         </div>
 
         {/* TITLE */}
         <h2
           style={{
-            fontSize: isMobile ? "28px" : "40px",
+            fontSize: isMobile ? "24px" : "34px", // 🔥 reduced
             fontWeight: 500,
             color: "#e5e7eb",
-            marginBottom: "14px",
+            marginBottom: "10px", // 🔥 reduced
           }}
         >
           Subscribe to Our Newsletter
@@ -72,11 +71,11 @@ export default function NewsletterSection() {
         {/* SUBTEXT */}
         <p
           style={{
-            fontSize: isMobile ? "14px" : "15px",
+            fontSize: isMobile ? "13px" : "14px",
             color: "#cbd5f5",
             maxWidth: "620px",
-            margin: "0 auto 32px",
-            lineHeight: "1.7",
+            margin: "0 auto 24px", // 🔥 reduced
+            lineHeight: "1.6",
           }}
         >
           Get the latest insights on AI automation, UX design, and digital
@@ -90,15 +89,15 @@ export default function NewsletterSection() {
             flexDirection: isMobile ? "column" : "row",
             justifyContent: "center",
             alignItems: "center",
-            gap: "14px",
+            gap: "10px", // 🔥 reduced
           }}
         >
           <input
             type="text"
             placeholder="Enter your email"
             style={{
-              width: isMobile ? "100%" : "320px",
-              padding: "14px 16px",
+              width: isMobile ? "100%" : "300px",
+              padding: "12px 14px", // 🔥 reduced
               borderRadius: "12px",
               border: "1px solid rgba(255,255,255,0.08)",
               background: "rgba(255,255,255,0.05)",
@@ -111,7 +110,7 @@ export default function NewsletterSection() {
           <button
             style={{
               width: isMobile ? "100%" : "auto",
-              padding: "10px 26px",
+              padding: "9px 22px", // 🔥 reduced
               borderRadius: "12px",
               border: "none",
               background: "linear-gradient(90deg,#2563eb,#3b82f6)",

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const GetStarted = () => {
   return (
-    <section className="w-full bg-[#020617] py-20 flex justify-center">
+    <section className="w-full bg-[#020617] py-12 flex justify-center">
 
       {/* CONTAINER */}
       <div className="w-full max-w-[1100px] px-6">
