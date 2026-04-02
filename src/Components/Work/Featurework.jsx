@@ -3,8 +3,8 @@ import container1 from '../../assets/container1.png'
 import container from '../../assets/container.png'
 import container3 from '../../assets/container3.png'
 import container4 from '../../assets/container4.png'
-import container5 from '../../assets/container5.png'
-import container6 from '../../assets/container6.png'
+import container5 from '../../assets/airobot.png'
+import container6 from '../../assets/contain.png'
 
 const statsData = [
   { id: 1, value: "150+", label: "Projects Completed" },
@@ -33,13 +33,13 @@ const Featurework = () => {
           <img src={container4} alt='' className='w-full rounded-lg bg-white/5 border-t-[0.8px] border-[#FFFFFF1A] shadow-[4px_6px_25px_0px_#00000024]' />
 
           {/* LAST TWO IMAGES */}
-          <div className='flex flex-col md:flex-row  items-start gap-6 w-full'>
+          <div className='flex flex-col md:flex-row   gap-6 w-full'>
 
             <div>
               <img
                 src={container5}
                 alt=''
-                className='w-[592px]  h-[442px] -mx-4 object-cover rounded-lg'
+                className='w-[592px] h-[441px] -mx-4 object-cover rounded-lg'
               />
             </div>
 
@@ -47,9 +47,7 @@ const Featurework = () => {
               <img
                 src={container6}
                 alt=''
-                className='w-[592px] h-[442px] object-cover rounded-[16px]
-                border-t-[0.8px] border-[#FFFFFF1A] 
-                shadow-[4px_6px_25px_0px_#00000024] pr-0'
+                className='w-[592px] h-[441px]  object-cover rounded-lg'
               />
             </div>
 
