@@ -56,7 +56,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* ✅ TABLET FIXED */}
+          {/* TABLET */}
           <div className="hidden md:flex lg:hidden items-center gap-6 ml-auto text-sm text-gray-300">
 
             <a href="/">Home</a>
@@ -86,7 +86,10 @@ export default function Navbar() {
 
             <a href="/work">Work</a>
             <a href="/about">About Us</a>
-            <a href="/process">Process</a>
+
+            {/* ✅ FIXED ROUTE */}
+            <a href="/Ourprocess">Process</a>
+
             <a href="/blog">Blog</a>
           </div>
 
@@ -128,7 +131,10 @@ export default function Navbar() {
 
           <a href="/work">Work</a>
           <a href="/about">About Us</a>
-          <a href="/process">Our Process</a>
+
+          {/* ✅ FIXED ROUTE */}
+          <a href="/Ourprocess">Our Process</a>
+
           <a href="/blog">Blog</a>
 
           <div className="bg-blue-600 py-2 rounded-lg text-center cursor-default">

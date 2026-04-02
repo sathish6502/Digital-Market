@@ -1,4 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+import p1 from "./../../assets/Ourservice/p3.png"
+import p2 from "./../../assets/Ourservice/p7.png"
+import p3 from "./../../assets/Ourservice/p4.png"
+import p4 from "./../../assets/Ourservice/p2.png"
+import p5 from "./../../assets/Ourservice/p6.png"
+import p6 from "./../../assets/Ourservice/p5.png"
+
+
+
 
 // ─── ICONS ──────────────────────────────────────────────────────────────────
 const SparklesIcon = ({ className }) => (
@@ -39,10 +48,10 @@ const ClockIcon = ({ className }) => (
     <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
   </svg>
 );
-const TargetIcon     = ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>);
-const TrendingUpIcon = ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>);
-const CheckCircleIcon= ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>);
-const ArrowRightIcon = ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>);
+const TargetIcon      = ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>);
+const TrendingUpIcon  = ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>);
+const CheckCircleIcon = ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>);
+const ArrowRightIcon  = ({ className }) => (<svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>);
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const PHASES = [
@@ -52,8 +61,7 @@ const PHASES = [
     accentClass: "text-blue-400",
     iconBg: "rgba(59,130,246,0.12)",
     iconBorder: "rgba(59,130,246,0.25)",
-    glow: "#3b82f6",
-    dot: "#60a5fa",
+    glow: "#3b82f6", dot: "#60a5fa",
     desc: "Understanding your business, goals, and challenges",
     duration: "1-2 weeks",
     activities: ["Stakeholder interviews","Market & competitor research","User research & personas","Project requirements gathering","Technical feasibility assessment"],
@@ -65,8 +73,7 @@ const PHASES = [
     accentClass: "text-emerald-400",
     iconBg: "rgba(16,185,129,0.12)",
     iconBorder: "rgba(16,185,129,0.25)",
-    glow: "#10b981",
-    dot: "#34d399",
+    glow: "#10b981", dot: "#34d399",
     desc: "Creating beautiful, functional designs",
     duration: "2-4 weeks",
     activities: ["Information architecture","Wireframing & user flows","Visual design & branding","Interactive prototyping","Usability testing"],
@@ -78,8 +85,7 @@ const PHASES = [
     accentClass: "text-purple-400",
     iconBg: "rgba(168,85,247,0.12)",
     iconBorder: "rgba(168,85,247,0.25)",
-    glow: "#a855f7",
-    dot: "#c084fc",
+    glow: "#a855f7", dot: "#c084fc",
     desc: "Building your solution with best practices",
     duration: "4-8 weeks",
     activities: ["Frontend development","Backend development","API integration","Quality assurance testing","Performance optimization"],
@@ -91,8 +97,7 @@ const PHASES = [
     accentClass: "text-rose-400",
     iconBg: "rgba(244,63,94,0.12)",
     iconBorder: "rgba(244,63,94,0.25)",
-    glow: "#f43f5e",
-    dot: "#fb7185",
+    glow: "#f43f5e", dot: "#fb7185",
     desc: "Launching and supporting your project",
     duration: "1-2 weeks",
     activities: ["Final testing & QA","Deployment to production","Training & handoff","Performance monitoring","Ongoing support"],
@@ -116,7 +121,7 @@ const TIMELINE_ITEMS = [
   { label:"Deploy",    time:"1-2 weeks", color:"#fb7185" },
 ];
 
-// ─── HOOK ────────────────────────────────────────────────────────────────────
+// ─── HOOKS ───────────────────────────────────────────────────────────────────
 function useInView(ref, threshold = 0.1) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -130,39 +135,41 @@ function useInView(ref, threshold = 0.1) {
   return visible;
 }
 
+function useWindowWidth() {
+  const [width, setWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1024
+  );
+  useEffect(() => {
+    const handle = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handle);
+    return () => window.removeEventListener("resize", handle);
+  }, []);
+  return width;
+}
+
+// ─── CONTAINER — exact match to Navbar: max-w-7xl mx-auto px-4 sm:px-6 md:px-12
+function Container({ children }) {
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+      {children}
+    </div>
+  );
+}
+
 // ─── DELIVERABLES CARD ───────────────────────────────────────────────────────
 function DeliverablesCard({ phase }) {
   return (
     <div style={{
-      background: "#0c0e14",
-      border: "1px solid rgba(255,255,255,0.07)",
-      borderRadius: 28,
-      padding: "2rem",
-      position: "relative",
-      overflow: "hidden",
-      boxShadow: "0 20px 60px -16px rgba(0,0,0,0.7)",
+      background:"#0c0e14", border:"1px solid rgba(255,255,255,0.07)",
+      borderRadius:28, padding:"1.5rem", position:"relative",
+      overflow:"hidden", boxShadow:"0 20px 60px -16px rgba(0,0,0,0.7)",
     }}>
-      {/* corner glow blob */}
-      <div style={{
-        position:"absolute", top:-40, right:-40,
-        width:100, height:100, borderRadius:"50%",
-        background: phase.glow, opacity:0.07, filter:"blur(30px)",
-        pointerEvents:"none",
-      }}/>
+      <div style={{ position:"absolute", top:-40, right:-40, width:100, height:100, borderRadius:"50%", background:phase.glow, opacity:0.07, filter:"blur(30px)", pointerEvents:"none" }}/>
       <p style={{ color:"#e5e7eb", fontWeight:600, fontSize:17, marginBottom:18 }}>Deliverables</p>
       <div style={{ display:"flex", flexDirection:"column", gap:9 }}>
         {phase.deliverables.map((d, i) => (
-          <div key={i} style={{
-            display:"flex", alignItems:"center", gap:14,
-            background:"rgba(255,255,255,0.025)",
-            border:"1px solid rgba(255,255,255,0.055)",
-            borderRadius:12, padding:"11px 16px",
-          }}>
-            <span style={{
-              width:8, height:8, borderRadius:"50%", flexShrink:0,
-              background: phase.dot,
-              boxShadow: `0 0 8px ${phase.dot}99`,
-            }}/>
+          <div key={i} style={{ display:"flex", alignItems:"center", gap:14, background:"rgba(255,255,255,0.025)", border:"1px solid rgba(255,255,255,0.055)", borderRadius:12, padding:"11px 16px" }}>
+            <span style={{ width:8, height:8, borderRadius:"50%", flexShrink:0, background:phase.dot, boxShadow:`0 0 8px ${phase.dot}99` }}/>
             <span style={{ color:"#9ca3af", fontSize:13.5 }}>{d}</span>
           </div>
         ))}
@@ -175,15 +182,8 @@ function DeliverablesCard({ phase }) {
 function PhaseContent({ phase }) {
   return (
     <div>
-      {/* Icon + Title row */}
       <div style={{ display:"flex", alignItems:"center", gap:16, marginBottom:18 }}>
-        <div style={{
-          width:48, height:48, borderRadius:16, flexShrink:0,
-          display:"flex", alignItems:"center", justifyContent:"center",
-          background: phase.iconBg,
-          border: `1px solid ${phase.iconBorder}`,
-          boxShadow: `0 0 24px -4px ${phase.glow}44`,
-        }}>
+        <div style={{ width:48, height:48, borderRadius:16, flexShrink:0, display:"flex", alignItems:"center", justifyContent:"center", background:phase.iconBg, border:`1px solid ${phase.iconBorder}`, boxShadow:`0 0 24px -4px ${phase.glow}44` }}>
           <span className={phase.accentClass}>{phase.icon}</span>
         </div>
         <div>
@@ -191,124 +191,74 @@ function PhaseContent({ phase }) {
           <p style={{ color:"#fff", fontSize:36, fontWeight:700, lineHeight:1, letterSpacing:"-0.02em" }}>{phase.title}</p>
         </div>
       </div>
-
       <p style={{ color:"#9ca3af", fontSize:14.5, lineHeight:1.7, marginBottom:22 }}>{phase.desc}</p>
-
       <p style={{ color:"#d1d5db", fontSize:11, fontWeight:600, letterSpacing:"0.14em", textTransform:"uppercase", marginBottom:14 }}>Key Activities</p>
       <div style={{ display:"flex", flexDirection:"column", gap:11, marginBottom:26 }}>
         {phase.activities.map((act, i) => (
           <div key={i} style={{ display:"flex", alignItems:"center", gap:11 }}>
-            <span style={{
-              width:20, height:20, borderRadius:"50%", flexShrink:0,
-              display:"flex", alignItems:"center", justifyContent:"center",
-              background:`${phase.glow}15`,
-              border:`1px solid ${phase.glow}28`,
-            }}>
+            <span style={{ width:20, height:20, borderRadius:"50%", flexShrink:0, display:"flex", alignItems:"center", justifyContent:"center", background:`${phase.glow}15`, border:`1px solid ${phase.glow}28` }}>
               <CheckIcon className={`w-3 h-3 ${phase.accentClass}`}/>
             </span>
             <span style={{ color:"#9ca3af", fontSize:13.5 }}>{act}</span>
           </div>
         ))}
       </div>
-
-      {/* Duration pill */}
-      <div style={{
-  display:"inline-flex",
-  alignItems:"center",
-  gap:10,
-  background:"rgba(255,255,255,0.04)",
-  border:"1px solid rgba(255,255,255,0.08)",
-  borderRadius:999,
-  padding:"10px 18px",
-  marginTop:14, // 🔥 gap above
-}}>
-  <ClockIcon className="w-4 h-4 text-emerald-400"/>
-  <span style={{
-    color:"#d1d5db",
-    fontSize:13,
-    fontWeight:500
-  }}>
-    Duration: {phase.duration}
-  </span>
-</div>
+      <div style={{ display:"inline-flex", alignItems:"center", gap:10, background:"rgba(255,255,255,0.04)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:999, padding:"10px 18px", marginTop:14 }}>
+        <ClockIcon className="w-4 h-4 text-emerald-400"/>
+        <span style={{ color:"#d1d5db", fontSize:13, fontWeight:500 }}>Duration: {phase.duration}</span>
+      </div>
     </div>
   );
 }
 
-// ─── PHASE ROW  (strict 2-col grid — no flex mismatch) ──────────────────────
+// ─── PHASE ROW ───────────────────────────────────────────────────────────────
 function PhaseRow({ phase, index }) {
-  const ref = useRef(null);
+  const ref     = useRef(null);
   const visible = useInView(ref);
-  const flip = index % 2 === 1; // odd → deliverables LEFT, content RIGHT
+  const width   = useWindowWidth();
+  const isMobile = width < 768;
+  const flip     = !isMobile && index % 2 === 1;
 
   return (
-    <div
-      ref={ref}
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "60px",
-        alignItems: "center",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(36px)",
-        transition: `opacity 0.7s ease ${index * 0.1}s, transform 0.7s ease ${index * 0.1}s`,
-      }}
-    >
-      {flip ? (
-        <>
-          <DeliverablesCard phase={phase} />
-          <PhaseContent phase={phase} />
-        </>
-      ) : (
-        <>
-          <PhaseContent phase={phase} />
-          <DeliverablesCard phase={phase} />
-        </>
-      )}
+    <div ref={ref} style={{
+      display:"grid",
+      gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+      gap: isMobile ? "24px" : "60px",
+      alignItems:"center",
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0)" : "translateY(36px)",
+      transition:`opacity 0.7s ease ${index*0.1}s, transform 0.7s ease ${index*0.1}s`,
+    }}>
+      {flip
+        ? <><DeliverablesCard phase={phase}/><PhaseContent phase={phase}/></>
+        : <><PhaseContent phase={phase}/><DeliverablesCard phase={phase}/></>
+      }
     </div>
   );
 }
 
-// ─── CONNECTOR LINE (between phases) ─────────────────────────────────────────
-// Exactly one short vertical line centered — same as original design
+// ─── CONNECTOR ───────────────────────────────────────────────────────────────
 function PhaseConnector({ from, to }) {
   return (
-    <div style={{ display:"flex", justifyContent:"center", height:80, alignItems:"stretch" }}>
-      <div style={{
-        width:2,
-        background:`linear-gradient(to bottom, ${from}80, ${to}60)`,
-        borderRadius:999,
-        opacity:0.7,
-      }}/>
+    <div style={{ display:"flex", justifyContent:"center", height:60, alignItems:"stretch" }}>
+      <div style={{ width:2, background:`linear-gradient(to bottom, ${from}80, ${to}60)`, borderRadius:999, opacity:0.7 }}/>
     </div>
   );
 }
 
 // ─── BENEFIT CARD ────────────────────────────────────────────────────────────
 function BenefitCard({ benefit, index }) {
-  const ref = useRef(null);
+  const ref     = useRef(null);
   const visible = useInView(ref);
   return (
-    <div
-      ref={ref}
-      style={{
-        background:"#0c0e14",
-        border:"1px solid rgba(255,255,255,0.08)",
-        borderRadius:22,
-        padding:"1.75rem",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(24px)",
-        transition:`opacity 0.6s ease ${index*0.08}s, transform 0.6s ease ${index*0.08}s`,
-      }}
-    >
-      <div
-        style={{
-          width:46, height:46, borderRadius:13,
-          display:"flex", alignItems:"center", justifyContent:"center",
-          marginBottom:18,
-        }}
-        className={`bg-gradient-to-br ${benefit.grad}`}
-      >
+    <div ref={ref} style={{
+      background:"#0c0e14", border:"1px solid rgba(255,255,255,0.08)",
+      borderRadius:22, padding:"1.75rem",
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0)" : "translateY(24px)",
+      transition:`opacity 0.6s ease ${index*0.08}s, transform 0.6s ease ${index*0.08}s`,
+    }}>
+      <div style={{ width:46, height:46, borderRadius:13, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:18 }} className={`bg-gradient-to-br ${benefit.grad}`}>
         {benefit.icon}
       </div>
       <p style={{ color:"#f3f4f6", fontWeight:600, fontSize:15.5, lineHeight:1.4, marginBottom:9 }}>{benefit.title}</p>
@@ -318,95 +268,49 @@ function BenefitCard({ benefit, index }) {
 }
 
 // ─── TIMELINE ────────────────────────────────────────────────────────────────
-// Absolute-positioned spine + dots sitting exactly on it
 function Timeline() {
-  const ref = useRef(null);
-  const visible = useInView(ref);
+  const ref      = useRef(null);
+  const visible  = useInView(ref);
+  const width    = useWindowWidth();
+  const isMobile = width < 640;
 
-  const CARD_H = 84;    // card height
-  const GAP    = 68;    // gap between cards
-  const DOT_D  = 14;    // dot diameter
-  const HALF   = DOT_D / 2;
-  const TOTAL  = TIMELINE_ITEMS.length * CARD_H + (TIMELINE_ITEMS.length - 1) * GAP;
+  if (isMobile) {
+    return (
+      <div ref={ref} style={{ display:"flex", flexDirection:"column", gap:0 }}>
+        {TIMELINE_ITEMS.map((item, i) => (
+          <div key={i} style={{ display:"flex", alignItems:"stretch", opacity:visible?1:0, transform:visible?"translateX(0)":"translateX(-16px)", transition:`opacity 0.6s ease ${i*0.14}s, transform 0.6s ease ${i*0.14}s` }}>
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"center", marginRight:16, width:20 }}>
+              <div style={{ width:14, height:14, borderRadius:"50%", flexShrink:0, background:item.color, border:"3px solid #050709", boxShadow:`0 0 14px ${item.color}bb`, marginTop:20 }}/>
+              {i < TIMELINE_ITEMS.length - 1 && (
+                <div style={{ width:2, flex:1, background:`linear-gradient(to bottom, ${item.color}80, ${TIMELINE_ITEMS[i+1].color}60)`, marginTop:4 }}/>
+              )}
+            </div>
+            <div style={{ flex:1, background:"#0c0e14", border:"1px solid rgba(255,255,255,0.09)", borderRadius:16, padding:"16px 18px", marginBottom:i < TIMELINE_ITEMS.length-1 ? 12 : 0 }}>
+              <p style={{ color:"#34d399", fontSize:11, fontWeight:600, letterSpacing:"0.08em", marginBottom:4 }}>{item.time}</p>
+              <p style={{ color:"#fff", fontSize:20, fontWeight:600 }}>{item.label}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
 
-  // Spine runs from center of first card to center of last card
-  const spineTop = CARD_H / 2;
-  const spineH   = TOTAL - CARD_H;
+  const CARD_H=84, GAP=68, DOT_D=14, HALF=DOT_D/2;
+  const TOTAL = TIMELINE_ITEMS.length*CARD_H + (TIMELINE_ITEMS.length-1)*GAP;
 
   return (
-    <div
-      ref={ref}
-      style={{
-        position:"relative",
-        width:"100%",
-        height: TOTAL,
-        opacity: visible ? 1 : 0,
-        transition:"opacity 0.7s ease",
-      }}
-    >
-      {/* ── SPINE — one straight line, perfectly centered ── */}
-      <div style={{
-        position:"absolute",
-        left:"50%",
-        top: spineTop,
-        width:2,
-        height: spineH,
-        transform:"translateX(-50%)",
-        background:"linear-gradient(to bottom, #60a5fa 0%, #34d399 33%, #c084fc 66%, #fb7185 100%)",
-        opacity:0.55,
-        borderRadius:999,
-        zIndex:0,
-      }}/>
-
-      {/* ── ITEMS ── */}
+    <div ref={ref} style={{ position:"relative", width:"100%", height:TOTAL, opacity:visible?1:0, transition:"opacity 0.7s ease" }}>
+      <div style={{ position:"absolute", left:"50%", top:CARD_H/2, width:2, height:TOTAL-CARD_H, transform:"translateX(-50%)", background:"linear-gradient(to bottom, #60a5fa 0%, #34d399 33%, #c084fc 66%, #fb7185 100%)", opacity:0.55, borderRadius:999, zIndex:0 }}/>
       {TIMELINE_ITEMS.map((item, i) => {
-        const isLeft = i % 2 === 0;
-        const rowTop = i * (CARD_H + GAP);
-        // dot top so its center aligns with the card's vertical center
-        const dotTop = rowTop + CARD_H / 2 - HALF;
-
+        const isLeft = i%2===0;
+        const rowTop = i*(CARD_H+GAP);
         return (
           <React.Fragment key={i}>
-            {/* Card */}
-            <div style={{
-              position:"absolute",
-              top: rowTop,
-              // left-side cards: left edge to (50% - gap - cardWidth), right-side: 50% + gap
-              ...(isLeft
-                ? { right:"calc(50% + 20px)", left:0 }
-                : { left:"calc(50% + 20px)", right:0 }),
-              height: CARD_H,
-              background:"#0c0e14",
-              border:"1px solid rgba(255,255,255,0.09)",
-              borderRadius:18,
-              padding:"0 22px",
-              display:"flex",
-              flexDirection:"column",
-              justifyContent:"center",
-              textAlign: isLeft ? "right" : "left",
-              zIndex:1,
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : `translateX(${isLeft ? -14 : 14}px)`,
-              transition:`opacity 0.6s ease ${i*0.14}s, transform 0.6s ease ${i*0.14}s`,
-            }}>
+            <div style={{ position:"absolute", top:rowTop, ...(isLeft?{right:"calc(50% + 20px)",left:0}:{left:"calc(50% + 20px)",right:0}), height:CARD_H, background:"#0c0e14", border:"1px solid rgba(255,255,255,0.09)", borderRadius:18, padding:"0 22px", display:"flex", flexDirection:"column", justifyContent:"center", textAlign:isLeft?"right":"left", zIndex:1, opacity:visible?1:0, transform:visible?"translateX(0)":`translateX(${isLeft?-14:14}px)`, transition:`opacity 0.6s ease ${i*0.14}s, transform 0.6s ease ${i*0.14}s` }}>
               <p style={{ color:"#34d399", fontSize:11, fontWeight:600, letterSpacing:"0.08em", marginBottom:4 }}>{item.time}</p>
               <p style={{ color:"#fff", fontSize:22, fontWeight:600 }}>{item.label}</p>
             </div>
-
-            {/* Dot — center aligned with card center, exactly on spine */}
-            <div style={{
-              position:"absolute",
-              left:"50%",
-              top: dotTop,
-              width: DOT_D,
-              height: DOT_D,
-              transform:"translateX(-50%)",
-              borderRadius:"50%",
-              background: item.color,
-              border:"3px solid #050709",
-              boxShadow:`0 0 14px ${item.color}bb`,
-              zIndex:2,
-            }}/>
+            <div style={{ position:"absolute", left:"50%", top:rowTop+CARD_H/2-HALF, width:DOT_D, height:DOT_D, transform:"translateX(-50%)", borderRadius:"50%", background:item.color, border:"3px solid #050709", boxShadow:`0 0 14px ${item.color}bb`, zIndex:2 }}/>
           </React.Fragment>
         );
       })}
@@ -416,111 +320,81 @@ function Timeline() {
 
 // ─── PAGE ────────────────────────────────────────────────────────────────────
 export default function ProcessPage() {
-  const heroRef = useRef(null);
+  const heroRef    = useRef(null);
   const heroVisible = useInView(heroRef);
+  const width      = useWindowWidth();
+  const isMobile   = width < 768;
 
   return (
     <div style={{ background:"#050709", color:"#fff", fontFamily:"system-ui,sans-serif", minHeight:"100vh" }}>
 
-      {/* HERO */}
-      <section style={{ position:"relative", overflow:"hidden", paddingTop:112, paddingBottom:80 }}>
-        <div style={{
-          position:"absolute", right:0, top:0, width:600, height:400, pointerEvents:"none",
-          background:"radial-gradient(ellipse at right top, rgba(15,60,130,0.55) 0%, transparent 70%)",
-        }}/>
-        <div style={{
-          position:"absolute", right:"8%", top:"20%", width:220, height:220,
-          borderRadius:"50%", background:"rgba(20,80,180,0.16)", filter:"blur(60px)", pointerEvents:"none",
-        }}/>
+      {/* ── HERO ── */}
+      <section style={{ position:"relative", overflow:"hidden", paddingTop:isMobile?72:112, paddingBottom:isMobile?52:80 }}>
+        <div style={{ position:"absolute", right:0, top:0, width:600, height:400, pointerEvents:"none", background:"radial-gradient(ellipse at right top, rgba(15,60,130,0.55) 0%, transparent 70%)" }}/>
+        <div style={{ position:"absolute", right:"8%", top:"20%", width:220, height:220, borderRadius:"50%", background:"rgba(20,80,180,0.16)", filter:"blur(60px)", pointerEvents:"none" }}/>
 
-        <div
-          ref={heroRef}
-          style={{
-            maxWidth:900, margin:"0 auto", padding:"0 24px",
-            textAlign:"center", position:"relative", zIndex:1,
-            opacity: heroVisible ? 1 : 0,
-            transform: heroVisible ? "translateY(0)" : "translateY(28px)",
-            transition:"opacity 0.8s ease, transform 0.8s ease",
-          }}
-        >
-          <div style={{ display:"flex", justifyContent:"center", marginBottom:28 }}>
-            <div style={{
-              display:"inline-flex", alignItems:"center", gap:10,
-              padding:"8px 18px", borderRadius:999,
-              border:"1px solid rgba(255,255,255,0.1)",
-              background:"rgba(255,255,255,0.06)",
-              color:"#d1d5db", fontSize:13,
-            }}>
-              <SparklesIcon className="w-4 h-4 text-emerald-400"/>
-              Proven Methodology
+        {/* ✅ Navbar-க்கு exact same container */}
+        <Container>
+          <div ref={heroRef} style={{ textAlign:"center", position:"relative", zIndex:10, opacity:heroVisible?1:0, transform:heroVisible?"translateY(0)":"translateY(28px)", transition:"opacity 0.8s ease, transform 0.8s ease" }}>
+            <div style={{ display:"flex", justifyContent:"center", marginBottom:28 }}>
+              <div style={{ display:"inline-flex", alignItems:"center", gap:10, padding:"8px 18px", borderRadius:999, border:"1px solid rgba(255,255,255,0.1)", background:"rgba(255,255,255,0.06)", color:"#d1d5db", fontSize:13 }}>
+                <SparklesIcon className="w-4 h-4 text-emerald-400"/>
+                Proven Methodology
+              </div>
             </div>
+            <h1 style={{ fontSize:isMobile?"clamp(44px,13vw,68px)":"clamp(52px,9vw,96px)", fontWeight:700, letterSpacing:"-0.03em", lineHeight:1, color:"#fff", marginBottom:20 }}>
+              Our Process
+            </h1>
+            <p style={{ color:"#6b7280", fontSize:isMobile?15:17, lineHeight:1.7, maxWidth:480, margin:"0 auto" }}>
+              A proven, collaborative approach that ensures successful project delivery from concept to launch.
+            </p>
           </div>
-
-          <h1 style={{
-  fontSize:"clamp(52px,9vw,96px)",
-  fontWeight:700,
-  letterSpacing:"-0.03em",
-  lineHeight:1,
-  color:"#fff",
-  marginBottom:20,
-}}>
-  Our Process
-</h1>
-          <p style={{ color:"#6b7280", fontSize:17, lineHeight:1.7, maxWidth:480, margin:"0 auto" }}>
-            A proven, collaborative approach that ensures successful project delivery from concept to launch.
-          </p>
-        </div>
+        </Container>
       </section>
 
-      {/* PHASES */}
-      <section style={{
-  paddingTop: 16,
-  paddingBottom: 96,
-  paddingLeft: 24,
-  paddingRight: 24, // 🔥 outer safe spacing
-}}>
-      <div style={{
-  maxWidth: 1200,
-  margin: "0 auto",
-  padding: "0 64px", // 🔥 more side space
-}}>
+      {/* ── PHASES ── */}
+      <section style={{ paddingTop:16, paddingBottom:96 }}>
+        {/* ✅ Navbar-க்கு exact same container */}
+        <Container>
           {PHASES.map((phase, i) => (
             <React.Fragment key={phase.title}>
-              <PhaseRow phase={phase} index={i} />
-              {i < PHASES.length - 1 && (
-                <PhaseConnector from={phase.glow} to={PHASES[i+1].glow} />
-              )}
+              <PhaseRow phase={phase} index={i}/>
+              {i < PHASES.length-1 && <PhaseConnector from={phase.glow} to={PHASES[i+1].glow}/>}
             </React.Fragment>
           ))}
-        </div>
+        </Container>
       </section>
 
-      {/* WHY OUR PROCESS WORKS */}
-      <section style={{ borderTop:"1px solid rgba(255,255,255,0.06)", padding:"96px 0" }}>
-        <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 32px" }}>
+      {/* ── WHY OUR PROCESS WORKS ── */}
+      <section style={{ borderTop:"1px solid rgba(255,255,255,0.06)", padding:isMobile?"64px 0":"96px 0" }}>
+        {/* ✅ Navbar-க்கு exact same container */}
+        <Container>
           <div style={{ textAlign:"center", marginBottom:52 }}>
-            <h2 style={{ fontSize:"clamp(30px,5vw,54px)", fontWeight:700, letterSpacing:"-0.02em", color:"#fff", marginBottom:10 }}>
+            <h2 style={{ fontSize:isMobile?"clamp(26px,7vw,42px)":"clamp(30px,5vw,54px)", fontWeight:700, letterSpacing:"-0.02em", color:"#fff", marginBottom:10 }}>
               Why Our Process Works
             </h2>
             <p style={{ color:"#6b7280", fontSize:16 }}>Benefits of working with GraphiKrafts</p>
           </div>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:18 }}>
+          <div style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":width<1024?"repeat(2,1fr)":"repeat(3,1fr)", gap:18 }}>
             {BENEFITS.map((b, i) => <BenefitCard key={i} benefit={b} index={i}/>)}
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* TIMELINE */}
-      <section style={{ borderTop:"1px solid rgba(255,255,255,0.06)", padding:"96px 0" }}>
-        <div style={{ maxWidth:580, margin:"0 auto", padding:"0 32px" }}>
-          <div style={{ textAlign:"center", marginBottom:72 }}>
-            <h2 style={{ fontSize:"clamp(30px,5vw,54px)", fontWeight:700, letterSpacing:"-0.02em", color:"#fff", marginBottom:10 }}>
-              Typical Project Timeline
-            </h2>
-            <p style={{ color:"#6b7280", fontSize:16 }}>Most projects are completed in 8-16 weeks</p>
+      {/* ── TIMELINE ── */}
+      <section style={{ borderTop:"1px solid rgba(255,255,255,0.06)", padding:isMobile?"64px 0":"96px 0" }}>
+        {/* ✅ Navbar-க்கு exact same container — timeline content max 580px center-ல் */}
+        <Container>
+          <div style={{ maxWidth:580, margin:"0 auto" }}>
+            <div style={{ textAlign:"center", marginBottom:isMobile?48:72 }}>
+              <h2 style={{ fontSize:isMobile?"clamp(26px,7vw,42px)":"clamp(30px,5vw,54px)", fontWeight:700, letterSpacing:"-0.02em", color:"#fff", marginBottom:10 }}>
+                Typical Project Timeline
+              </h2>
+              <p style={{ color:"#6b7280", fontSize:16 }}>Most projects are completed in 8-16 weeks</p>
+            </div>
+            <Timeline/>
           </div>
-          <Timeline />
-        </div>
+        </Container>
       </section>
 
     </div>
