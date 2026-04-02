@@ -8,6 +8,8 @@ import Work from "./Pages/Work";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import Blank from "./Components/Footer/Blank"
+import Footer from "./Components/Footer/Footer";
+import Ourprocess from "./Pages/Ourprocess";
 
 const App = () => {
   return (
