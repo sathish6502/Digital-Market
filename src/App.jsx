@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Home from "./Pages/Home";
-
 import Service from "./Pages/Service";
 import Individualservice from "./Pages/Individualservice";
 import Work from "./Pages/Work";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import Footer from "./Components/Footer/Footer";
+import Blank from "./Components/Footer/Blank"
 
 const App = () => {
   return (
@@ -24,6 +24,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer />
+      <Blank/>
     </BrowserRouter>
   );
 };
