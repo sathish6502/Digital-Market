@@ -1,10 +1,10 @@
 import React from 'react'
-import container1 from '../../assets/container1.png'
-import container from '../../assets/container.png'
-import container3 from '../../assets/container3.png'
-import container4 from '../../assets/container4.png'
-import container5 from '../../assets/airobot.png'
-import container6 from '../../assets/contain.png'
+import container1 from '../../Assets/container1.png'
+import container from '../../Assets/container.png'
+import container3 from '../../Assets/container3.png'
+import container4 from '../../Assets/container4.png'
+import container5 from '../../Assets/airobot.png'
+import container6 from '../../Assets/contain.png'
 
 const statsData = [
   { id: 1, value: "150+", label: "Projects Completed" },

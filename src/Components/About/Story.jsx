@@ -1,5 +1,5 @@
 import React from "react";
-import teamImage from "./../../assets/About/team.png";
+import teamImage from "./../../Assets/About/team.png";
 
 const OurStory = () => {
   return (

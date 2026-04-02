@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layers, ArrowRight } from "lucide-react";
-import IndividualImg from "../../assets/Service/Images/individualimg.png";
+import IndividualImg from "../../Assets/Service/Images/individualimg.png";
 
 const Websiteuiux = () => {
   return (

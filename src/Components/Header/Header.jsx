@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import GLogo from "./../../assets/Header/GLogo.jpg";
+import GLogo from "./../../Assets/Header/GLogo.jpg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

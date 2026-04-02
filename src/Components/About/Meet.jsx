@@ -1,7 +1,7 @@
-import img1 from "./../../assets/About/Team1.png";
-import img2 from "./../../assets/About/Team2.png";
-import img3 from "./../../assets/About/Team3.png";
-import img4 from "./../../assets/About/Team4.png";
+import img1 from "./../../Assets/About/Team1.png";
+import img2 from "./../../Assets/About/Team2.png";
+import img3 from "./../../Assets/About/Team3.png";
+import img4 from "./../../Assets/About/Team4.png";
 
 const team = [
   {

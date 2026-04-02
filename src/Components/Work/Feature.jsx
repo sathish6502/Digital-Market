@@ -1,6 +1,6 @@
 import React from "react";
-import featuredIcon from "../../assets/Icon.png"; // your icon
-import portfolio from '../../assets/WorkPortfolio.png'
+import featuredIcon from "../../Assets/Icon.png"; // your icon
+import portfolio from '../../Assets/WorkPortfolio.png'
 
 const Feature = () => {
   return (

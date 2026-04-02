@@ -1,9 +1,9 @@
 import React from "react";
 
-import targetIcon from "./../../assets/About/Logo1.png";
-import aiIcon from "./../../assets/About/Logo2.png";
-import heartIcon from "./../../assets/About/Logo3.png";
-import usersIcon from "./../../assets/About/Logo4.png";
+import targetIcon from "./../../Assets/About/Logo1.png";
+import aiIcon from "./../../Assets/About/Logo2.png";
+import heartIcon from "./../../Assets/About/Logo3.png";
+import usersIcon from "./../../Assets/About/Logo4.png";
 
 const values = [
   {
