@@ -1,21 +1,31 @@
-import React from 'react'
-import Footer from './Components/Footer/Footer'
-import Service from './Pages/Service'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Individualservice from './Pages/Individualservice'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Components/Header/Header";
+import Home from "./Pages/Home";
+import Ourprocess from "./Pages/Ourprocess";
+import Service from "./Pages/Service";
+import Individualservice from "./Pages/Individualservice";
+import Work from "./Pages/Work";
+import About from "./Pages/About";
+import Blog from "./Pages/Blog";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
-    <div>
-   <BrowserRouter>
-   <Routes>
-    <Route path="/service" element={<Service />}/>
-    <Route path="/individualservice" element={<Individualservice />}/>
-    </Routes>  
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ourprocess" element={<Ourprocess />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/services/:serviceId" element={<Individualservice />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
-    <Footer />
-    </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
