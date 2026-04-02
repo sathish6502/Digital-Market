@@ -1,5 +1,5 @@
 import { FaLinkedin, FaDribbble, FaGithub } from "react-icons/fa";
-import FootericonImg from "../../Assets/Footer/footericon.png"
+import FootericonImg from "../../Assets/Footer/footericon.jpg";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#334155] text-gray-300">
