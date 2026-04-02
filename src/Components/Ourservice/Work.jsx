@@ -213,14 +213,24 @@ function PhaseContent({ phase }) {
 
       {/* Duration pill */}
       <div style={{
-        display:"inline-flex", alignItems:"center", gap:8,
-        background:"rgba(255,255,255,0.05)",
-        border:"1px solid rgba(255,255,255,0.09)",
-        borderRadius:999, padding:"6px 14px",
-      }}>
-        <ClockIcon className="w-3.5 h-3.5 text-gray-500"/>
-        <span style={{ color:"#9ca3af", fontSize:11.5 }}>Duration: {phase.duration}</span>
-      </div>
+  display:"inline-flex",
+  alignItems:"center",
+  gap:10,
+  background:"rgba(255,255,255,0.04)",
+  border:"1px solid rgba(255,255,255,0.08)",
+  borderRadius:999,
+  padding:"10px 18px",
+  marginTop:14, // 🔥 gap above
+}}>
+  <ClockIcon className="w-4 h-4 text-emerald-400"/>
+  <span style={{
+    color:"#d1d5db",
+    fontSize:13,
+    fontWeight:500
+  }}>
+    Duration: {phase.duration}
+  </span>
+</div>
     </div>
   );
 }
@@ -237,7 +247,7 @@ function PhaseRow({ phase, index }) {
       style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        gap: "40px",
+        gap: "60px",
         alignItems: "center",
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(36px)",
@@ -447,11 +457,15 @@ export default function ProcessPage() {
           </div>
 
           <h1 style={{
-            fontSize:"clamp(52px,9vw,96px)", fontWeight:700,
-            letterSpacing:"-0.03em", lineHeight:1, color:"#fff", marginBottom:20,
-          }}>
-            Our <span style={{ fontWeight:300, fontStyle:"Regular" }}>Process</span>
-          </h1>
+  fontSize:"clamp(52px,9vw,96px)",
+  fontWeight:700,
+  letterSpacing:"-0.03em",
+  lineHeight:1,
+  color:"#fff",
+  marginBottom:20,
+}}>
+  Our Process
+</h1>
           <p style={{ color:"#6b7280", fontSize:17, lineHeight:1.7, maxWidth:480, margin:"0 auto" }}>
             A proven, collaborative approach that ensures successful project delivery from concept to launch.
           </p>
@@ -459,8 +473,17 @@ export default function ProcessPage() {
       </section>
 
       {/* PHASES */}
-      <section style={{ paddingTop:16, paddingBottom:96 }}>
-        <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 32px" }}>
+      <section style={{
+  paddingTop: 16,
+  paddingBottom: 96,
+  paddingLeft: 24,
+  paddingRight: 24, // 🔥 outer safe spacing
+}}>
+      <div style={{
+  maxWidth: 1200,
+  margin: "0 auto",
+  padding: "0 64px", // 🔥 more side space
+}}>
           {PHASES.map((phase, i) => (
             <React.Fragment key={phase.title}>
               <PhaseRow phase={phase} index={i} />
