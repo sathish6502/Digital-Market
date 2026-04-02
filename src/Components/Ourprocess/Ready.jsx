@@ -6,7 +6,7 @@ const Readytogetstart = () => {
       
       <div
         className="
-          w-full max-w-5xl
+          w-full max-w-6xl
           rounded-3xl
           border border-white/[0.08]
           px-6 md:px-16 py-16

@@ -6,7 +6,7 @@ const Websiteuiux = () => {
   return (
     <section className="w-full min-h-screen bg-gradient-to-r from-[#020617] via-[#020617] to-[#000000] flex items-center px-4">
       
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
         
         {/* LEFT CONTENT */}
         <div className="text-left">
