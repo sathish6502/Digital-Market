@@ -1,11 +1,11 @@
 import React from "react";
 
-import img1 from "../../Assets/Blog/Blog1.jpg";
-import img2 from "../../Assets/Blog/Blog2.jpg";
-import img3 from "../../Assets/Blog/Blog3.jpg";
-import img4 from "../../Assets/Blog/Blog4.jpg";
-import img5 from "../../Assets/Blog/Blog5.jpg";
-import img6 from "../../Assets/Blog/Blog6.jpg";
+import img1 from "../../assets/Blog/Blog1.jpg";
+import img2 from "../../assets/Blog/Blog2.jpg";
+import img3 from "../../assets/Blog/Blog3.jpg";
+import img4 from "../../assets/Blog/Blog4.jpg";
+import img5 from "../../assets/Blog/Blog5.jpg";
+import img6 from "../../assets/Blog/Blog6.jpg";
 
 const blogs = [
   {
