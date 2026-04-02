@@ -45,7 +45,7 @@ const Featurework = () => {
               <img
                 src={container5}
                 alt=''
-                className='w-[592px] h-[441px] -mx-4 object-cover rounded-lg'
+                className='w-[592px] h-[441px]  object-cover rounded-lg'
               />
             </div>
 
