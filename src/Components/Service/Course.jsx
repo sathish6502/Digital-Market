@@ -86,7 +86,7 @@ const services = [
 const Course = () => {
   return (
     <section className="w-full bg-[#020617] py-20 px-4">
-      <div className="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         
         {services.map((item, index) => {
           const Icon = item.icon;
@@ -97,7 +97,7 @@ const Course = () => {
               className="relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent"
             >
               {/* Card */}
-              <div className="bg-[#020617]/90 backdrop-blur-xl rounded-2xl p-6 h-full border border-gray-800 hover:border-gray-600 transition duration-300">
+              <div className="bg-[#020617]/20 backdrop-blur-xl rounded-2xl p-6 h-full border border-gray-800 hover:border-gray-300 transition duration-300">
                 
                 {/* Icon */}
                 <div className={`w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br ${item.color} mb-4`}>
