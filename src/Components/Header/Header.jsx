@@ -51,7 +51,7 @@ export default function Navbar() {
 
             <a href="/work">Work</a>
             <a href="/about">About Us</a>
-            <a href="/process">Our Process</a>
+            <a href="/ourprocess">Our Process</a>
             <a href="/blog">Blog</a>
 
             {/* STATIC CONTACT BUTTON */}
