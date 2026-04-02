@@ -3,8 +3,8 @@ import container1 from '../../assets/container1.png'
 import container from '../../assets/container.png'
 import container3 from '../../assets/container3.png'
 import container4 from '../../assets/container4.png'
-import container5 from '../../assets/container5.png'
-import container6 from '../../assets/container6.png'
+import container5 from '../../assets/airobot.png'
+import container6 from '../../assets/contain.png'
 
 const statsData = [
   { id: 1, value: "150+", label: "Projects Completed" },
@@ -16,13 +16,13 @@ const statsData = [
 const Featurework = () => {
   return (
 
-    <section className="w-full bg-[#020617]">
+    <section className="container mx-auto bg-[#020617] px-6 py-12">
 
       {/* ✅ FIX 1: Equal left/right spacing */}
-      <div className='max-w-[1100px] mx-auto py-12 px-6'>
+      <div className='w-full mx-auto py-12 px-6'>
 
         {/* IMAGE STACK */}
-        <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-6'>
 
           <img src={container1} alt='' className='w-full object-cover rounded-lg' />
 
@@ -33,23 +33,21 @@ const Featurework = () => {
           <img src={container4} alt='' className='w-full rounded-lg bg-white/5 border-t-[0.8px] border-[#FFFFFF1A] shadow-[4px_6px_25px_0px_#00000024]' />
 
           {/* LAST TWO IMAGES */}
-          <div className='flex flex-col md:flex-row gap-6 w-full'>
+          <div className='flex flex-col md:flex-row   gap-6 w-full'>
 
-            <div className='flex-1'>
+            <div>
               <img
                 src={container5}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg'
+                className='w-[592px] h-[441px] -mx-4 object-cover rounded-lg'
               />
             </div>
 
-            <div className='flex-1'>
+            <div>
               <img
                 src={container6}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg
-                border-t-[0.8px] border-[#FFFFFF1A] 
-                shadow-[4px_6px_25px_0px_#00000024]'
+                className='w-[592px] h-[441px]  object-cover rounded-lg'
               />
             </div>
 
@@ -57,7 +55,7 @@ const Featurework = () => {
         </div>
 
         {/* STATS */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-8'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
 
           {statsData.map((item) => (
 
@@ -65,7 +63,7 @@ const Featurework = () => {
             <div
               key={item.id}
               className='max-w-[260px] w-full mx-auto rounded-2xl 
-              bg-white/5 border-t border-white/10 
+              bg-white/10 border-t border-white/10 
               shadow-[4px_6px_25px_0px_#00000024] 
               p-8 flex flex-col items-center'
             >
