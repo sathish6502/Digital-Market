@@ -28,18 +28,20 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-gradient-to-b from-[#020617] to-[#020617] py-8 sm:py-16 px-4">
+    <section className="bg-gradient-to-b from-[#020617] to-[#020617] py-10 sm:py-20 px-4 sm:px-6">
       
-      <div className="text-center mb-10 sm:mb-14 -mt-10">
-        <h2 className="text-white text-3xl sm:text-4xl font-lg">
+      {/* Heading */}
+      <div className="text-center mb-10 sm:mb-16">
+        <h2 className="text-white text-2xl sm:text-4xl font-medium">
           Meet the Team
         </h2>
-        <p className="text-gray-400 mt-3 text-sm sm:text-base">
+        <p className="text-gray-400 mt-2 text-sm sm:text-base">
           The talented individuals behind our success
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 max-w-6xl mx-auto">
+      {/* Team Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 max-w-6xl mx-auto">
         
         {team.map((member, index) => (
           <div key={index} className="text-center">
@@ -48,15 +50,15 @@ export default function TeamSection() {
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-full h-[220px] sm:h-[240px] md:h-[260px] object-cover rounded-2xl"
+                className="w-full h-[200px] sm:h-[240px] md:h-[260px] object-cover rounded-2xl"
               />
             </div>
 
-            <h3 className="text-white font-medium mt-4 mb-5 text-base sm:text-lg">
+            <h3 className="text-white font-medium mt-3 text-sm sm:text-lg">
               {member.name}
             </h3>
 
-            <p className="text-blue-500 text-sm mt-1">
+            <p className="text-blue-500 text-xs sm:text-sm mt-1">
               {member.role}
             </p>
           </div>
