@@ -15,69 +15,77 @@ const statsData = [
 
 const Featurework = () => {
   return (
-
-    <section className="container mx-auto bg-[#020617] px-6 py-12">
-
-      {/* ✅ FIX 1: Equal left/right spacing */}
-      <div className='w-full mx-auto py-12 px-6'>
+    <section className="w-full bg-[#020617] py-16 px-4 md:px-8">
+      
+      <div className="max-w-7xl mx-auto">
 
         {/* IMAGE STACK */}
-        <div className='flex flex-col gap-6'>
+        <div className="flex flex-col gap-6">
 
-          <img src={container1} alt='' className='w-full object-cover rounded-lg' />
+          <img
+            src={container1}
+            alt=""
+            className="w-full h-auto object-cover rounded-xl"
+          />
 
-          <img src={container} alt='' className='w-full bg-white/5 border-t-[0.8px] border-white/10 shadow-[4px_6px_25px_0px_rgba(0,0,0,0.14)] rounded-lg' />
+          <img
+            src={container}
+            alt=""
+            className="w-full h-auto rounded-xl bg-white/5 border border-white/10 shadow-[4px_6px_25px_0px_rgba(0,0,0,0.14)]"
+          />
 
-          <img src={container3} alt='' className='w-full object-cover rounded-lg' />
+          <img
+            src={container3}
+            alt=""
+            className="w-full h-auto object-cover rounded-xl"
+          />
 
-          <img src={container4} alt='' className='w-full rounded-lg bg-white/5 border-t-[0.8px] border-[#FFFFFF1A] shadow-[4px_6px_25px_0px_#00000024]' />
+          <img
+            src={container4}
+            alt=""
+            className="w-full h-auto rounded-xl bg-white/5 border border-white/10 shadow-[4px_6px_25px_0px_#00000024]"
+          />
 
-          {/* LAST TWO IMAGES */}
-          <div className='flex flex-col md:flex-row  items-start gap-6 w-full'>
+ <div className="flex flex-col md:flex-row md:-space-x-10">
+  
+  <div className="w-full md:w-1/2">
+    <img
+      src={container5}
+      alt=""
+      className="w-[1000px] object-cover rounded-2xl -ml-5"
+    />
+  </div>
 
-            <div>
-              <img
-                src={container5}
-                alt=''
-                className='w-[592px]  h-[442px] -mx-4 object-cover rounded-lg'
-              />
-            </div>
+  <div className="w-full md:w-1/2">
+    <img
+      src={container6}
+      alt=""
+      className="w-[1000px] object-cover rounded-2xl ml-6"
+    />
+  </div>
 
-            <div>
-              <img
-                src={container6}
-                alt=''
-                className='w-[592px] h-[442px] object-cover rounded-[16px]
-                border-t-[0.8px] border-[#FFFFFF1A] 
-                shadow-[4px_6px_25px_0px_#00000024]'
-              />
-            </div>
+
 
           </div>
+
         </div>
 
         {/* STATS */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
 
           {statsData.map((item) => (
-
-            // ✅ FIX 2: Proper spacing (no merge)
             <div
               key={item.id}
-              className='max-w-[260px] w-full mx-auto rounded-2xl 
-              bg-white/10 border-t border-white/10 
-              shadow-[4px_6px_25px_0px_#00000024] 
-              p-8 flex flex-col items-center'
+              className="rounded-2xl bg-white/10 border border-white/10 shadow-[4px_6px_25px_0px_#00000024] p-8 flex flex-col items-center justify-center"
             >
-              <h1 className="font-normal text-5xl leading-[48px] text-center text-[#FFFFFF]">
+              <h1 className="text-4xl md:text-5xl text-white text-center">
                 {item.value}
               </h1>
 
-              <p className='font-normal leading-[24px] text-center text-[#FFFFFFB2]'>
+              <p className="text-center text-[#FFFFFFB2] mt-2">
                 {item.label}
               </p>
             </div>
-
           ))}
 
         </div>
