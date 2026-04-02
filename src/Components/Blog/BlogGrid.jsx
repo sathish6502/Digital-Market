@@ -81,7 +81,6 @@ export default function BlogGrid() {
   return (
     <section className="w-full bg-[#020617] py-12">
 
-      {/* ✅ ONLY FIXED CONTAINER */}
       <div className=" px-8 sm:px-10 md:px-15">
 
         <div className="flex flex-col md:flex-row gap-6 w-full">
@@ -126,7 +125,8 @@ export default function BlogGrid() {
             {blogs.map((blog, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden border border-[#1e293b] bg-transparent"
+                className="rounded-xl overflow-hidden border border-[#1e293b] 
+                bg-gradient-to-br from-[#0b1220] via-[#0b1220]/90 to-[#020617]"
               >
                 <div className="h-[200px] sm:h-[220px] w-full overflow-hidden">
                   <img
