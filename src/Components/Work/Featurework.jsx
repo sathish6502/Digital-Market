@@ -18,7 +18,8 @@ const Featurework = () => {
 
     <section className="container mx-auto bg-[#020617] px-6 py-12">
 
-      <div className='max-w-[1100px] mx-auto py-12 px-6'>
+      {/* ✅ FIX 1: Equal left/right spacing */}
+      <div className='w-full mx-auto py-12 px-6'>
 
         {/* IMAGE STACK */}
         <div className='flex flex-col gap-6'>
@@ -31,24 +32,24 @@ const Featurework = () => {
 
           <img src={container4} alt='' className='w-full rounded-lg bg-white/5 border-t-[0.8px] border-[#FFFFFF1A] shadow-[4px_6px_25px_0px_#00000024]' />
 
-          {/* ✅ FIXED LAST TWO IMAGES */}
-          <div className='flex flex-col md:flex-row gap-6 w-full'>
+          {/* LAST TWO IMAGES */}
+          <div className='flex flex-col md:flex-row  items-start gap-6 w-full'>
 
-            {/* LEFT */}
-            <div className='flex-1'>
+            <div>
               <img
                 src={container5}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg block'
+                className='w-[592px]  h-[442px] -mx-4 object-cover rounded-lg'
               />
             </div>
 
-            {/* RIGHT */}
-            <div className='flex-1'>
+            <div>
               <img
                 src={container6}
                 alt=''
-                className='w-full h-[300px] md:h-[320px] lg:h-[340px] object-cover rounded-lg block'
+                className='w-[592px] h-[442px] object-cover rounded-[16px]
+                border-t-[0.8px] border-[#FFFFFF1A] 
+                shadow-[4px_6px_25px_0px_#00000024]'
               />
             </div>
 
