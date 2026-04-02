@@ -1,10 +1,10 @@
-import React from 'react'
-import container1 from '../../assets/container1.png'
-import container from '../../assets/container.png'
-import container3 from '../../assets/container3.png'
-import container4 from '../../assets/container4.png'
-import container5 from '../../assets/airobot.png'
-import container6 from '../../assets/contain.png'
+import React from "react";
+import container1 from "../../assets/container1.png";
+import container from "../../assets/container.png";
+import container3 from "../../assets/container3.png";
+import container4 from "../../assets/container4.png";
+import container5 from "../../assets/container5.png";
+import container6 from "../../assets/container6.png";
 
 const statsData = [
   { id: 1, value: "150+", label: "Projects Completed" },
@@ -39,7 +39,15 @@ const Featurework = () => {
           />
 
           {/* LAST TWO IMAGES */}
-          <div className='flex flex-col md:flex-row   gap-6 w-full'>
+          <div className="flex flex-col md:flex-row gap-6 w-full">
+  
+  <div className="flex flex-col md:flex-row gap-6 w-full">
+  
+  <img
+    src={container5}
+    alt=""
+    className="w-full md:w-1/2 rounded-lg object-cover"
+  />
 
             <div>
               <img
@@ -49,13 +57,7 @@ const Featurework = () => {
               />
             </div>
 
-            <div>
-              <img
-                src={container6}
-                alt=''
-                className='w-[592px] h-[441px]  object-cover rounded-lg'
-              />
-            </div>
+</div>
 
 </div>
         </div>
