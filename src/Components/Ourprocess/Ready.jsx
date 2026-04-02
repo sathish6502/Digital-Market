@@ -2,75 +2,37 @@ import React from 'react'
 
 const Readytogetstart = () => {
   return (
-    <div className="bg-[#020617] py-20 px-4 flex justify-center">
+    <div className="bg-[#020617] py-10 px-6 flex justify-center">
       
-      <div
-        className="
-          w-full max-w-5xl
-          rounded-3xl
-          border border-white/[0.08]
-          px-6 md:px-16 py-16
-          text-center
-          relative overflow-hidden
-        "
-        style={{
-          background: 'linear-gradient(135deg, #0a2a4a 0%, #0a3d35 50%, #0d4a3a 100%)',
-          boxShadow: '0 0 80px rgba(0, 80, 200, 0.15), inset 0 1px 0 rgba(255,255,255,0.06)',
-        }}
-      >
-        {/* Subtle radial glow top-left */}
-        <div
-          className="absolute -top-20 -left-20 w-72 h-72 rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(30,100,200,0.18) 0%, transparent 70%)' }}
-        />
-        {/* Subtle radial glow bottom-right */}
-        <div
-          className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(10,150,100,0.14) 0%, transparent 70%)' }}
-        />
-
-        {/* Heading */}
-        <h2 className="relative z-10 text-4xl md:text-5xl font-semibold text-white mb-5 tracking-tight">
+      <div className="mt-5 mb-10 w-full max-w-6xl mx-auto min-h-[260px] p-8 md:p-12 rounded-xl 
+      bg-gradient-to-r from-[#0066FF]/20 to-[#00D98C]/20 backdrop-blur-md 
+      flex flex-col items-center justify-center text-center">
+        
+        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
           Ready to Get Started?
         </h2>
 
-        {/* Description */}
-        <p className="relative z-10 text-gray-300/80 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light">
-          Let's discuss your project and how our process can bring your vision to life.
+        <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+          Let’s discuss your project and how our website & UI/UX design services 
+          can help you achieve your goals.
         </p>
 
-        {/* Buttons */}
-        <div className="relative z-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
+        {/* 🔥 BUTTONS */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           
-          {/* Primary Button */}
-          <button
-            className="
-              flex items-center gap-2
-              bg-blue-600 hover:bg-blue-500
-              px-7 py-3 rounded-lg
-              text-white text-sm font-medium
-              transition-all duration-200
-              shadow-[0_0_20px_rgba(37,99,235,0.4)]
-            "
-          >
+          {/* Primary */}
+          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg text-white font-medium shadow-md">
             Start Your Project
             <span>→</span>
           </button>
 
-          {/* Secondary Button */}
-          <button
-            className="
-              px-7 py-3 rounded-lg
-              text-gray-200 text-sm font-medium
-              bg-white/[0.07]
-              hover:bg-white/[0.12]
-              transition-all duration-200
-            "
-          >
+          {/* Secondary */}
+          <button className="px-6 py-3 rounded-lg text-gray-200 font-medium bg-white/10 hover:bg-white/20 transition">
             View Our Work
           </button>
 
         </div>
+
       </div>
     </div>
   )
