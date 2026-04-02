@@ -27,7 +27,7 @@ const Readytogetstart = () => {
           </button>
 
           {/* Secondary */}
-          <button className="px-6 py-3 rounded-lg text-gray-200 font-medium bg-white/10 hover:bg-white/20 transition">
+          <button className="px-6 py-3 rounded-lg text-gray-200 font-medium bg-white/10 hover:bg-white/20 transition ">
             View Our Work
           </button>
 
