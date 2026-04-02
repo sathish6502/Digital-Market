@@ -4,7 +4,7 @@ import IndividualImg from "../../assets/Service/Images/individualimg.png";
 
 const Websiteuiux = () => {
   return (
-    <section className="w-full min-h-screen bg-gradient-to-r from-[#020617] via-[#020617] to-[#000000] flex items-center px-4">
+    <section className="w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-screen bg-gradient-to-r from-[#020617] via-[#020617] to-[#000000] flex items-center px-4">
       
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
         
