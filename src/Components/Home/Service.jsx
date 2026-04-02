@@ -50,7 +50,7 @@ export default function ServicesSection() {
       {/* Background Glow */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[150px]"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Heading */}
         <div className="text-center mb-12">
