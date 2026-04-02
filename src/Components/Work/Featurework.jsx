@@ -16,12 +16,12 @@ const statsData = [
 const Featurework = () => {
   return (
 
-    <section className="w-full bg-[#020617]">
+    <section className="container mx-auto bg-[#020617] px-6 py-12">
 
       <div className='max-w-[1100px] mx-auto py-12 px-6'>
 
         {/* IMAGE STACK */}
-        <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-6'>
 
           <img src={container1} alt='' className='w-full object-cover rounded-lg' />
 
@@ -56,13 +56,13 @@ const Featurework = () => {
         </div>
 
         {/* STATS */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-8'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
 
           {statsData.map((item) => (
             <div
               key={item.id}
               className='max-w-[260px] w-full mx-auto rounded-2xl 
-              bg-white/5 border-t border-white/10 
+              bg-white/10 border-t border-white/10 
               shadow-[4px_6px_25px_0px_#00000024] 
               p-8 flex flex-col items-center'
             >
