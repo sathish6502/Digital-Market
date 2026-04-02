@@ -41,7 +41,7 @@ const Feature = () => {
             {["All Work","UI/UX","Web","Mobile","Branding"].map((label) => (
               <button 
                 key={label}
-                className="bg-[#FFFFFF0D] border-t-[0.8px] border-t-[#FFFFFF1A] 
+                className="bg-white/10 border-t-[0.8px] border-t-[#FFFFFF1A] 
                            shadow-[4px_6px_25px_0px_#00000024] 
                            hover:bg-[#0066FF] 
                            hover:shadow-[0px_0px_40px_0px_#0066FF1A] 
