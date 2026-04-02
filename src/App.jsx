@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home";
@@ -14,6 +15,8 @@ import Ourprocess from "./Pages/Ourprocess";
 const App = () => {
   return (
     <BrowserRouter>
+
+      {/* 🔥 HEADER FULL WIDTH (NO PADDING) */}
       <Header />
 
       <Routes>
