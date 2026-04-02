@@ -25,7 +25,7 @@ const Featurework = () => {
           <img
             src={container1}
             alt=""
-            className="w-full h-auto object-cover rounded-xl"
+            className="w-full h-auto object-cover rounded-2xl"
           />
 
           <img
@@ -37,7 +37,7 @@ const Featurework = () => {
           <img
             src={container3}
             alt=""
-            className="w-full h-auto object-cover rounded-xl"
+            className="w-full h-auto object-cover rounded-2xl"
           />
 
           <img
@@ -47,13 +47,13 @@ const Featurework = () => {
           />
 
           {/* LAST TWO IMAGES */}
-          <div className='flex flex-col md:flex-row   gap-6 w-full'>
+          <div className='flex flex-col md:flex-row   gap-6 w-full '>
 
             <div>
               <img
                 src={container5}
                 alt=''
-                className='w-[592px] h-[441px] -mx-4 object-cover rounded-lg'
+                className='w-[592px] h-[441px]  object-cover rounded-2xl'
               />
             </div>
 
@@ -61,7 +61,7 @@ const Featurework = () => {
               <img
                 src={container6}
                 alt=''
-                className='w-[592px] h-[441px]  object-cover rounded-lg'
+                className='w-[592px] h-[441px]  object-cover rounded-2xl'
               />
             </div>
 
