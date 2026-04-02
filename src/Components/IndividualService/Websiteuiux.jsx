@@ -12,10 +12,12 @@ const Websiteuiux = () => {
         <div className="text-left">
           
           {/* Icon */}
-          <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#0066FF]/30 to-[#00D98C]/30 mb-6">
-            <Layers className="text-white w-5 h-5" />
-          </div>
-
+         <div className="w-12 h-12 flex items-center justify-center rounded-lg 
+                bg-gradient-to-br from-[#0066FF]/30 to-[#00D98C]/30 
+                mt-2 mb-6">
+  <Layers className="text-white w-5 h-5" />
+</div>
+    
           {/* Heading */}
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
             Website & UI/UX <br /> Design

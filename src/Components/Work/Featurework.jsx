@@ -17,7 +17,7 @@ const Featurework = () => {
   return (
     <section className="w-full bg-[#020617] py-12">
       {/* CONTAINER */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* IMAGE STACK */}
         <div className="flex flex-col gap-6">

@@ -9,7 +9,6 @@ import Work from "./Pages/Work";
 import About from "./Pages/About";
 import Ourprocess from "./Pages/Ourservice";
 import Blog from "./Pages/Blog";
-import Footer from "./Components/Footer/Footer";
 import Blank from "./Components/Footer/Blank"
 
 const App = () => {
