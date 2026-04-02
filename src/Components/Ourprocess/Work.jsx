@@ -1,10 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import p1 from "./../../assets/Ourservice/p3.png"
-import p2 from "./../../assets/Ourservice/p7.png"
-import p3 from "./../../assets/Ourservice/p4.png"
-import p4 from "./../../assets/Ourservice/p2.png"
-import p5 from "./../../assets/Ourservice/p6.png"
-import p6 from "./../../assets/Ourservice/p5.png"
+
 
 
 
