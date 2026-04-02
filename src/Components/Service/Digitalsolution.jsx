@@ -3,7 +3,7 @@ import DigitalsolutionIcon from "../../assets/Service/Icons/digitalsolutionIcon.
 
 const Digitalsolution = () => {
   return (
-     <section className="relative w-full min-h-screen bg-gradient-to-b from-[#020617] via-[#020617] to-[#000000] flex items-center justify-center px-4 overflow-hidden">
+     <section className="relative w-full min-h-screen bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617] flex items-center justify-center px-4 overflow-hidden">
       
       {/* 🔥 Green Blur Background */}
       <div className="absolute w-[400px] h-[400px] bg-[#00D98C]/20 blur-[128px] rounded-full top-[-50px] left-1/2 -translate-x-1/2"></div>

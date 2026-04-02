@@ -86,7 +86,7 @@ const services = [
 const Course = () => {
   return (
     <section className="w-full bg-[#020617] py-20 px-4">
-      <div className="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         
         {services.map((item, index) => {
           const Icon = item.icon;
