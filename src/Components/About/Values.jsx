@@ -31,7 +31,7 @@ const values = [
 const OurValues = () => {
   return (
     <section
-      className="py-6 px-4 md:px-10 lg:px-10 
+      className="py-3 px-4 md:px-10 lg:px-10 
       bg-gradient-to-b from-[#020617] to-[#020617]"
     >
       {/* CARD */}
