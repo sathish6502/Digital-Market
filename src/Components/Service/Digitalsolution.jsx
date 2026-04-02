@@ -1,5 +1,5 @@
 import React from 'react'
-import DigitalsolutionIcon from "../../assets/Service/Icons/digitalsolutionIcon.png"
+import DigitalsolutionIcon from "../../assets/Service/Icons/digitalsolutionIcon.jpg"
 
 const Digitalsolution = () => {
   return (
