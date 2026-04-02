@@ -1,20 +1,30 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+
+import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Service from "./Pages/Service";
 import Ourservice from "./Pages/Ourservice";
 import Individualservice from "./Pages/Individualservice";
-import Footer from "./Components/Footer/Footer";
+import Work from "./Pages/Work";
+import Blog from "./Pages/Blog";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Header />
+
       <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/individualservice" element={<Individualservice />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/services/:serviceId" element={<Individualservice />} />
         <Route path="/ourservice" element={<Ourservice />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
 
       <Footer />
