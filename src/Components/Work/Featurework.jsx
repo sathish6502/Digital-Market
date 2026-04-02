@@ -17,12 +17,14 @@ const Featurework = () => {
   return (
     <section className="w-full bg-[#020617] py-12">
       {/* CONTAINER */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-1">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* IMAGE STACK */}
         <div className="flex flex-col gap-6">
-
-          <img src={container1} alt="" className="w-full rounded-lg object-cover" />
+          <img
+            src={container1}
+            alt=""
+            className="w-full rounded-lg object-cover"
+          />
 
           <img
             src={container}
@@ -30,7 +32,11 @@ const Featurework = () => {
             className="w-full rounded-lg bg-white/5 border border-white/10 shadow-md"
           />
 
-          <img src={container3} alt="" className="w-full rounded-lg object-cover" />
+          <img
+            src={container3}
+            alt=""
+            className="w-full rounded-lg object-cover"
+          />
 
           <img
             src={container4}
@@ -40,24 +46,22 @@ const Featurework = () => {
 
           {/* LAST TWO IMAGES */}
           <div className="flex flex-col md:flex-row gap-6 w-full">
-  
-  <div className="flex flex-col md:flex-row gap-6 w-full">
-  
-  <img
-    src={container5}
-    alt=""
-    className="w-full md:w-1/2 rounded-lg object-cover"
-  />
+            <div className="flex flex-col md:flex-row gap-6 w-full">
+              <img
+                src={container5}
+                alt=""
+                className="w-full md:w-1/2 rounded-lg object-cover"
+              />
 
-  <img
-    src={container6}
-    alt=""
-    className="w-full md:w-1/2 rounded-lg object-cover"
-  />
-
-</div>
-
-</div>
+              <div>
+                <img
+                  src={container5}
+                  alt=""
+                  className="w-[592px] h-[441px]  object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* STATS */}
@@ -67,17 +71,12 @@ const Featurework = () => {
               key={item.id}
               className="w-full rounded-2xl bg-white/10 border border-white/10 shadow-md p-6 flex flex-col items-center"
             >
-              <h1 className="text-3xl md:text-4xl text-white">
-                {item.value}
-              </h1>
+              <h1 className="text-3xl md:text-4xl text-white">{item.value}</h1>
 
-              <p className="text-white/70 text-center mt-2">
-                {item.label}
-              </p>
+              <p className="text-white/70 text-center mt-2">{item.label}</p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
