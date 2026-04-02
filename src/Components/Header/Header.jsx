@@ -22,13 +22,10 @@ export default function Navbar() {
 
           {/* DESKTOP */}
           <div className="hidden lg:flex items-center gap-10 text-sm text-gray-300 ml-auto">
-
             <a href="/" className="hover:text-white">Home</a>
 
-            {/* Services */}
             <div className="relative flex items-center gap-1">
               <a href="/services">Services</a>
-
               <span
                 onClick={(e) => {
                   e.preventDefault();
@@ -41,7 +38,7 @@ export default function Navbar() {
               </span>
 
               {showServices && (
-                <div className="absolute top-6 left-0 bg-[#0b1220] px-3 py-2 rounded text-sm z-50">
+                <div className="absolute top-full mt-2 left-0 bg-[#0b1220] px-3 py-2 rounded text-sm z-50">
                   <a href="/services/individualservice" className="whitespace-nowrap block">
                     Individual Service
                   </a>
@@ -51,10 +48,9 @@ export default function Navbar() {
 
             <a href="/work">Work</a>
             <a href="/about">About Us</a>
-            <a href="/ourprocess">Our Process</a>
+            <a href="/Ourprocess">Our Process</a>
             <a href="/blog">Blog</a>
 
-            {/* STATIC CONTACT BUTTON */}
             <div className="bg-blue-600 px-5 py-2 rounded-lg text-white cursor-default">
               Contact Us
             </div>
@@ -80,7 +76,7 @@ export default function Navbar() {
               </span>
 
               {showServices && (
-                <div className="absolute top-6 left-0 bg-[#0b1220] px-3 py-2 rounded text-sm">
+                <div className="absolute top-full mt-2 left-0 bg-[#0b1220] px-3 py-2 rounded text-sm shadow-lg border border-white/10 z-50">
                   <a href="/services/individualservice" className="block whitespace-nowrap">
                     Individual Service
                   </a>
@@ -90,7 +86,10 @@ export default function Navbar() {
 
             <a href="/work">Work</a>
             <a href="/about">About Us</a>
-            <a href="/process">Process</a>
+
+            {/* ✅ FIXED ROUTE */}
+            <a href="/Ourprocess">Process</a>
+
             <a href="/blog">Blog</a>
           </div>
 
@@ -110,13 +109,15 @@ export default function Navbar() {
 
           <a href="/">Home</a>
 
-          {/* Services */}
           <div>
-            <div
-              onClick={() => setShowServices(!showServices)}
-              className="flex items-center gap-1 cursor-pointer"
-            >
-              Services <ChevronDown size={14} />
+            <div className="flex items-center gap-1">
+              <a href="/services">Services</a>
+              <span
+                onClick={() => setShowServices(!showServices)}
+                className="cursor-pointer"
+              >
+                <ChevronDown size={14} />
+              </span>
             </div>
 
             {showServices && (
@@ -130,10 +131,12 @@ export default function Navbar() {
 
           <a href="/work">Work</a>
           <a href="/about">About Us</a>
-          <a href="/process">Our Process</a>
+
+          {/* ✅ FIXED ROUTE */}
+          <a href="/Ourprocess">Our Process</a>
+
           <a href="/blog">Blog</a>
 
-          {/* STATIC CONTACT BUTTON */}
           <div className="bg-blue-600 py-2 rounded-lg text-center cursor-default">
             Contact Us
           </div>

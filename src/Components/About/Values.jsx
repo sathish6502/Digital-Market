@@ -1,78 +1,88 @@
-import userLogo from "./../../assets/About/Logo1.png";
-import aiLogo from "./../../assets/About/Logo2.png";
-import performanceLogo from "./../../assets/About/Logo3.png";
-import scalableLogo from "./../../assets/About/Logo4.png";
+import React from "react";
+
+import targetIcon from "./../../assets/About/Logo1.png";
+import aiIcon from "./../../assets/About/Logo2.png";
+import heartIcon from "./../../assets/About/Logo3.png";
+import usersIcon from "./../../assets/About/Logo4.png";
 
 const values = [
   {
+    icon: targetIcon,
     title: "User-First Philosophy",
-    description:
-      "Research-backed design that prioritizes user needs and drives engagement through seamless UX.",
-    icon: userLogo,
+    desc: "Research-backed design that prioritizes user needs and drives engagement through seamless UX.",
   },
   {
+    icon: aiIcon,
     title: "AI Integration",
-    description:
-      "24/7 automation, intelligent support, and AI-enhanced creative services for maximum efficiency.",
-    icon: aiLogo,
+    desc: "24/7 automation, intelligent support, and AI-enhanced creative services for maximum efficiency.",
   },
   {
+    icon: heartIcon,
     title: "Performance-Driven",
-    description:
-      "Ongoing insights and optimization with measurable results through analytics and A/B testing.",
-    icon: performanceLogo,
+    desc: "Ongoing insights and optimization with measurable results through analytics and A/B testing.",
   },
   {
+    icon: usersIcon,
     title: "Scalable Solutions",
-    description:
-      "Built for future growth with flexible architecture that adapts to your evolving business needs.",
-    icon: scalableLogo,
+    desc: "Built for future growth with flexible architecture that adapts to your evolving business needs.",
   },
 ];
 
-export default function OurValues() {
+const OurValues = () => {
   return (
-    <section className="bg-gradient-to-b from-[#020617] to-[#020617] py-10 sm:py-12 px-4">
-      
-      <div className="w-full max-w-6xl mx-auto bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl px-4 sm:px-8 md:px-12 py-10 sm:py-12 text-center shadow-2xl">
-        
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-lg text-white">
-          Our Values
-        </h2>
-      
-        <p className="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg">
-          The principles that guide everything we do
-        </p>
+    <section
+      className="py-5 px-4 md:px-10 lg:px-10 
+      bg-gradient-to-b from-[#020617] to-[#020617]"
+    >
+      {/* CARD */}
+      <div
+        className="max-w-6xl mx-auto rounded-3xl p-10 md:p-14
+        bg-gradient-to-br from-[#878181b1]/60 via-[#878181b1]/20 to-[#878181b1]/60
+   
+        shadow-[0_8px_40px_rgba(255,255,255,0.05)]"
+      >
+        {/* HEADER */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-lg text-white mb-5">
+            Our Values
+          </h2>
+          <p className="text-gray-400">
+            The principles that guide everything we do
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mt-8 sm:mt-10">
-
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
           {values.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center mx-auto max-w-[250px]"
-            >
+            <div key={index} className="flex flex-col items-center">
               
-              {/* Logo */}
-              <div className="w-15 h-14 sm:w-13 sm:h-16 md:w-18 md:h-18 flex items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-green-400 shadow-lg">
+              {/* ICON BOX */}
+              <div
+                className="w-14 h-14 flex items-center justify-center rounded-xl 
+                bg-gradient-to-br from-[#3b82f6] to-[#22c55e] mb-5 shadow-lg"
+              >
                 <img
                   src={item.icon}
                   alt={item.title}
-                  className="w-full h-full object-contain"
+                  className="w-14 h-14 object-contain"
                 />
               </div>
 
-              <h3 className="text-white font-semibold mt-3 sm:mt-4 text-sm sm:text-base md:text-lg">
+              {/* TITLE */}
+              <h3 className="text-white font-medium mb-2 text-[15px]">
                 {item.title}
               </h3>
 
-              <p className="text-gray-400 text-xs sm:text-sm md:text-base mt-2 leading-relaxed px-2 sm:px-4">
-                {item.description}
+              {/* DESC */}
+              <p className="text-gray-400 text-[13.5px] leading-relaxed max-w-[220px]">
+                {item.desc}
               </p>
             </div>
           ))}
-
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default OurValues;

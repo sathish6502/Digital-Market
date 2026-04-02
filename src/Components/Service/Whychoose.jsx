@@ -74,7 +74,7 @@ const Whychoose = () => {
         {/* CTA Section */}
        <div className="mt-12 max-w-3xl mx-auto min-h-[260px] p-8 md:p-12 rounded-xl bg-gradient-to-r from-[#0066FF]/20 to-[#00D98C]/20 backdrop-blur-md">
   
-  <h3 className="text-white text-xl md:text-2xl font-semibold">
+  <h3 className="text-white text-2xl md:text-2xl font-semibold">
     Ready to Transform Your Brand?
   </h3>
 
