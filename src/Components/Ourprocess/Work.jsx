@@ -433,16 +433,15 @@ export default function ProcessPage() {
           borderRadius:"50%", background:"rgba(20,80,180,0.16)", filter:"blur(60px)", pointerEvents:"none",
         }}/>
 
-        <div
-          ref={heroRef}
-          style={{
-            maxWidth:900, margin:"0 auto", padding:"0 24px",
-            textAlign:"center", position:"relative", zIndex:1,
-            opacity: heroVisible ? 1 : 0,
-            transform: heroVisible ? "translateY(0)" : "translateY(28px)",
-            transition:"opacity 0.8s ease, transform 0.8s ease",
-          }}
-        >
+<div
+  ref={heroRef}
+  className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 text-center relative z-10"
+  style={{
+    opacity: heroVisible ? 1 : 0,
+    transform: heroVisible ? "translateY(0)" : "translateY(28px)",
+    transition: "opacity 0.8s ease, transform 0.8s ease",
+  }}
+>
           <div style={{ display:"flex", justifyContent:"center", marginBottom:28 }}>
             <div style={{
               display:"inline-flex", alignItems:"center", gap:10,
@@ -479,11 +478,7 @@ export default function ProcessPage() {
   paddingLeft: 24,
   paddingRight: 24, // 🔥 outer safe spacing
 }}>
-      <div style={{
-  maxWidth: 1200,
-  margin: "0 auto",
-  padding: "0 64px", // 🔥 more side space
-}}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
           {PHASES.map((phase, i) => (
             <React.Fragment key={phase.title}>
               <PhaseRow phase={phase} index={i} />
