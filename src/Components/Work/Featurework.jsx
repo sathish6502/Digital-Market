@@ -49,7 +49,7 @@ const Featurework = () => {
                 alt=''
                 className='w-[592px] h-[442px] object-cover rounded-[16px]
                 border-t-[0.8px] border-[#FFFFFF1A] 
-                shadow-[4px_6px_25px_0px_#00000024]'
+                shadow-[4px_6px_25px_0px_#00000024] pr-0'
               />
             </div>
 
